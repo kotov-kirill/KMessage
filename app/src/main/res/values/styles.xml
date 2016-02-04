@@ -1,20 +1,43 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimaryDefault</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkDefault</item>
+        <item name="colorAccent">@color/colorAccentDefault</item>
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+        <item name="actionModeStyle">@style/ActionModeDefault</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace</item>
+
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_default</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- ActionMode Styles -->
+    <style name="ActionModeDefault" parent="Base.Widget.AppCompat.ActionMode">
+        <item name="background">@android:color/white</item>
+        <item name="titleTextStyle">@style/actionModeTitle</item>
+    </style>
+    <style name="actionModeTitle" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <!--<item name="android:textColor">?android:attr/textColorSecondary</item>-->
+        <item name="android:textColor">@color/colorPrimaryDefault</item>
+    </style>
+    <!-- / -->
+
+    <!-- Profile Buttons Styles -->
+    <style name="ButtonProfileTheme" parent="android:Widget.Button">
+        <item name="android:minHeight">37dip</item>
+        <item name="android:minWidth">64dip</item>
+        <item name="android:background">@drawable/button_profile_background</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+    <style name="ButtonProfileThemeExit" parent="ButtonProfileTheme">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:background">@drawable/button_exit_profile_background</item>
+    </style>
+    <!-- / -->
 
 </resources>

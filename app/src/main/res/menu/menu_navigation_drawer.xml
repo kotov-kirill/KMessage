@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_account"
+            android:title="@string/nav_menu_profile"
+            android:id="@+id/menu_navigation_profile" />
+        <item
+            android:icon="@drawable/ic_newspaper"
+            android:title="@string/nav_menu_news"
+            android:id="@+id/menu_navigation_news"
+            android:checked="true"/>
+        <item
+            android:icon="@drawable/ic_email"
+            android:title="@string/nav_menu_messages"
+            android:id="@+id/menu_navigation_messages" />
+    </group>
+
+    <item android:title="@string/nav_sub_more">
+        <menu>
+            <item
+                android:id="@+id/navigation_item_settings"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/nav_item_settings" />
+            <item
+                android:id="@+id/navigation_item_about"
+                android:icon="@drawable/ic_account_box"
+                android:title="@string/nav_item_about" />
+        </menu>
+    </item>
+
+</menu>
