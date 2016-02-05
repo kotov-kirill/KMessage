@@ -98,7 +98,7 @@ public class MessagesActivity extends AppCompatActivity {
         };
         this.listView = (ListView) this.findViewById(R.id.list_view_messages);
         this.listView.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE_MODAL);
-        this.listView.setAdapter(new ListViewAdapterMessages(this, R.layout.message_list_view_layout, this.messages));
+        this.listView.setAdapter(new ListViewAdapter(this, R.layout.message_list_view_layout, this.messages));
 
         this.choiceModeListener = new MultiChoiceModeListenerImpl(this, this.listView);
         this.listView.setMultiChoiceModeListener(this.choiceModeListener);

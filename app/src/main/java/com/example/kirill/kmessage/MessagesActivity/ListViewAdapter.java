@@ -17,8 +17,8 @@ import java.util.List;
  * @author Rakov Kirill
  */
 
-public class ListViewAdapterMessages extends ArrayAdapter<Message>{
-    public ListViewAdapterMessages(Context context, int resource, List<Message> objects) {
+public class ListViewAdapter extends ArrayAdapter<Message>{
+    public ListViewAdapter(Context context, int resource, List<Message> objects) {
         super(context, resource, objects);
     }
     static class ViewHolder{
