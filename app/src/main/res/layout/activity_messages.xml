@@ -25,6 +25,14 @@
 
         <include layout="@layout/content_messages" />
 
+        <android.support.design.widget.FloatingActionButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/floating_button"
+            android:src="@drawable/ic_plus"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="@dimen/fab_margin" />
+
     </android.support.design.widget.CoordinatorLayout>
 
     <android.support.design.widget.NavigationView
