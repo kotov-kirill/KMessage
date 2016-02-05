@@ -1,0 +1,5 @@
+http://www.android4devs.com/2015/06/navigation-view-material-design-support.html
+http://www.sitepoint.com/material-design-android-design-support-library/
+https://www.genymotion.com/
+http://antonioleiva.com/collapsing-toolbar-layout/
+http://www.fandroid.info/primer-ispolzovaniya-cardview-i-recyclerview-v-android/
