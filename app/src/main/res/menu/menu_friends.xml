@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_new_search"
+        android:title="@string/action_search"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_magnify" />
+
+    <item
+        android:id="@+id/action_new_friend"
+        android:title="@string/action_new_friends"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_plus" />
+
+</menu>

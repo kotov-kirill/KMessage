@@ -14,6 +14,10 @@
             android:icon="@drawable/ic_email"
             android:title="@string/nav_menu_messages"
             android:id="@+id/menu_navigation_messages" />
+        <item
+            android:icon="@drawable/ic_account_star"
+            android:title="@string/nav_menu_friends"
+            android:id="@+id/menu_navigation_friends" />
     </group>
 
     <item android:title="@string/nav_sub_more">

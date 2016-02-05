@@ -17,8 +17,8 @@ import java.util.List;
  * @author Rakov Kirill
  */
 
-public class ListViewAdapter extends ArrayAdapter<Message>{
-    public ListViewAdapter(Context context, int resource, List<Message> objects) {
+public class ListViewAdapterMessages extends ArrayAdapter<Message>{
+    public ListViewAdapterMessages(Context context, int resource, List<Message> objects) {
         super(context, resource, objects);
     }
     static class ViewHolder{
@@ -36,7 +36,7 @@ public class ListViewAdapter extends ArrayAdapter<Message>{
             viewHolder = new ViewHolder();
             row = LayoutInflater.from(getContext()).inflate(R.layout.message_list_view_layout, parent, false);
             viewHolder.avatarId = row.findViewById(R.id.avatar_id);
-            viewHolder.senderName = (TextView) row.findViewById(R.id.sender_name);
+            viewHolder.senderName = (TextView) row.findViewById(R.id.FIO);
             viewHolder.messageDate = (TextView) row.findViewById(R.id.message_date);
             viewHolder.lastMessage = (TextView) row.findViewById(R.id.last_message);
             row.setTag(viewHolder);

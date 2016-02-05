@@ -26,11 +26,14 @@
         <activity
             android:name=".MessagesActivity.MessagesActivity"
             android:label="@string/title_activity_messages"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".FileDialog"
-            android:label="@string/title_activity_file_dialog" >
-        </activity>
+            android:label="@string/title_activity_file_dialog"></activity>
+        <activity
+            android:name=".FriendsActivity.FriendsActivity"
+            android:label="@string/title_activity_friends"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

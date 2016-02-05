@@ -9,14 +9,17 @@
         <item name="windowActionModeOverlay">true</item>
         <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace</item>
 
-        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_default</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_default
+        </item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     <style name="AppTheme.AppBarOverlay.Light" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="titleTextColor">@android:color/white</item>
         <item name="colorControlNormal">@android:color/white</item>
     </style>
+
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <!-- ActionMode Styles -->
@@ -24,6 +27,7 @@
         <!--<item name="background">@android:color/white</item>-->
         <item name="titleTextStyle">@style/actionModeTitle</item>
     </style>
+
     <style name="actionModeTitle" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
         <!--<item name="android:textColor">?android:attr/textColorSecondary</item>-->
         <item name="android:textColor">@color/colorPrimaryDefault</item>
@@ -37,6 +41,7 @@
         <item name="android:background">@drawable/button_profile_background</item>
         <item name="android:paddingLeft">10dp</item>
     </style>
+
     <style name="ButtonProfileThemeExit" parent="ButtonProfileTheme">
         <item name="android:paddingTop">8dp</item>
         <item name="android:paddingBottom">8dp</item>

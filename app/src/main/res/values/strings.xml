@@ -58,5 +58,10 @@
     <string name="create_save">Save</string>
     <string name="select_open">Open</string>
     <string name="create_open">Save</string>
+    <string name="nav_menu_friends">Friends</string>
+    <string name="title_activity_friends">Friends</string>
+    <string name="action_new_friends">New Friend</string>
+    <string name="tab_item_all_friends">All Friends</string>
+    <string name="tab_item_on_line_friends">Online</string>
     <!-- / -->
 </resources>
