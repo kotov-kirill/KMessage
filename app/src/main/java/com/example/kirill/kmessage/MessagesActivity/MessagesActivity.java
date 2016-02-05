@@ -88,12 +88,14 @@ public class MessagesActivity extends AppCompatActivity {
         this.choiceModeListener = new MultiChoiceModeListenerImpl(this, this.listView);
         this.listView.setMultiChoiceModeListener(this.choiceModeListener);
     }
+
     private int getRandomNumber(){
         return (int) (Math.random()*256);
     }
     private int getColor(){
         return Color.argb(80, getRandomNumber(), getRandomNumber(), getRandomNumber());
     }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

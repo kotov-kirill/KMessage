@@ -13,11 +13,15 @@
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay.Light" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="titleTextColor">@android:color/white</item>
+        <item name="colorControlNormal">@android:color/white</item>
+    </style>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <!-- ActionMode Styles -->
     <style name="ActionModeDefault" parent="Base.Widget.AppCompat.ActionMode">
-        <item name="background">@android:color/white</item>
+        <!--<item name="background">@android:color/white</item>-->
         <item name="titleTextStyle">@style/actionModeTitle</item>
     </style>
     <style name="actionModeTitle" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
