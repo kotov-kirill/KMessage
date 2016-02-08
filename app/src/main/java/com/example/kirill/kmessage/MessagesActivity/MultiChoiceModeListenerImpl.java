@@ -9,6 +9,7 @@ import android.util.SparseBooleanArray;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -87,7 +88,13 @@ public class MultiChoiceModeListenerImpl implements AbsListView.MultiChoiceModeL
             }
         });
         builder.setNegativeButton(R.string.negative_button, null);
-        builder.show();
+        AlertDialog dialog = builder.show();
+
+        // Set title divider color
+        int titleDividerId = this.context.getResources().getIdentifier("titleDivider", "id", "android");
+        View titleDivider = dialog.findViewById(titleDividerId);
+        if (titleDivider != null)
+            titleDivider.setBackgroundResource(R.color.colorPrimaryDefault);
     }
 
     private ActionMode actionMode;

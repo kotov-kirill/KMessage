@@ -9,8 +9,9 @@
         <item name="windowActionModeOverlay">true</item>
         <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace</item>
 
-        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_default
-        </item>
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_default</item>
+
+        <item name="android:alertDialogTheme">@style/Theme_Sphinx_Dialog_Alert</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -47,6 +48,22 @@
         <item name="android:paddingBottom">8dp</item>
         <item name="android:background">@drawable/button_exit_profile_background</item>
     </style>
+    <!-- / -->
+
+    <!-- AlertDialog Styles -->
+    <style name="Theme_Sphinx_Dialog_Alert" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle_Sphinx</item>
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+        <item name="android:borderlessButtonStyle">@style/ButtonProfileTheme</item>
+    </style>
+
+    <style name="DialogWindowTitle_Sphinx">
+        <item name="android:textAppearance">@android:style/TextAppearance.Holo.DialogWindowTitle</item>
+        <item name="android:textColor">@color/colorPrimaryDefault</item>
+    </style>
+
     <!-- / -->
 
 </resources>
