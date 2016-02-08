@@ -14,50 +14,166 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <RelativeLayout
-                android:orientation="vertical"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="112dp">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:divider="@drawable/separator"
+                android:showDividers="middle">
+                <RelativeLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="112dp">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/profile_image"
-                    android:layout_width="76dp"
-                    android:layout_height="76dp"
-                    android:src="@drawable/profile"
-                    app:border_color="#FF000000"
-                    android:layout_marginLeft="24dp"
-                    android:layout_centerVertical="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="24dp" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile_image"
+                        android:layout_width="76dp"
+                        android:layout_height="76dp"
+                        android:src="@drawable/profile"
+                        app:border_color="#FF000000"
+                        android:layout_marginLeft="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="24dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kotov Kirill"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:textStyle="bold"
+                        android:gravity="left"
+                        android:paddingBottom="4dp"
+                        android:id="@+id/username"
+                        android:layout_centerVertical="true"
+                        android:layout_alignLeft="@+id/email"
+                        android:layout_alignStart="@+id/email" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="kotov-kirill@gmail.com"
+                        android:id="@+id/email"
+                        android:gravity="left"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/black"
+                        android:layout_below="@+id/username"
+                        android:layout_toRightOf="@+id/profile_image"
+                        android:layout_marginLeft="21dp" />
+                </RelativeLayout>
+
+                <Button
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Kotov Kirill"
-                    android:textSize="14sp"
-                    android:textColor="@android:color/black"
-                    android:textStyle="bold"
-                    android:gravity="left"
-                    android:paddingBottom="4dp"
-                    android:id="@+id/username"
-                    android:layout_centerVertical="true"
-                    android:layout_alignLeft="@+id/email"
-                    android:layout_alignStart="@+id/email" />
+                    android:text="Edit Information"
+                    style="@style/ButtonSettings" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
-                <TextView
-                    android:layout_width="wrap_content"
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="kotov-kirill@gmail.com"
-                    android:id="@+id/email"
-                    android:gravity="left"
-                    android:textSize="14sp"
-                    android:textColor="@android:color/black"
-                    android:layout_below="@+id/username"
-                    android:layout_toRightOf="@+id/profile_image"
-                    android:layout_marginLeft="21dp" />
-            </RelativeLayout>
+                    android:text="@string/button_text_common"
+                    android:gravity="left|center_vertical"
+                    android:drawableLeft="@drawable/ic_format_list_bulleted"
+                    style="@style/ButtonThemeDefault"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_text_notifications"
+                    android:gravity="left|center_vertical"
+                    android:drawableLeft="@drawable/ic_bell"
+                    style="@style/ButtonThemeDefault"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_text_confidential"
+                    android:gravity="left|center_vertical"
+                    android:drawableLeft="@drawable/ic_lock"
+                    style="@style/ButtonThemeDefault"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_text_account"
+                    android:gravity="left|center_vertical"
+                    android:drawableLeft="@drawable/ic_account_box_outline"
+                    style="@style/ButtonThemeDefault"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_text_reset"
+                    android:gravity="left|center_vertical"
+                    android:drawableLeft="@drawable/ic_sync"
+                    style="@style/ButtonThemeDefault"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_view_about"
+                    style="@style/Base.TextAppearance.AppCompat.Small"
+                    android:textColor="@color/colorPrimaryDefault"
+                    android:paddingLeft="20dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_text_about_us"
+                    android:gravity="left|center_vertical"
+                    android:drawableLeft="@drawable/ic_account_box_dark"
+                    style="@style/ButtonThemeDefault"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_text_write_author"
+                    android:gravity="left|center_vertical"
+                    android:drawableLeft="@drawable/ic_email_open"
+                    style="@style/ButtonThemeDefault"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_text_exit"
+                style="@style/ButtonProfileThemeExit" />
         </android.support.v7.widget.CardView>
     </LinearLayout>
 

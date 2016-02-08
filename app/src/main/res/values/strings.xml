@@ -63,6 +63,18 @@
     <string name="action_new_friends">New Friend</string>
     <string name="tab_item_all_friends">All Friends</string>
     <string name="tab_item_on_line_friends">Online</string>
+    <!-- / -->
+
+    <!-- Settings Activity -->
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="button_text_language">Language</string>
+    <string name="button_text_notifications">Notifications</string>
+    <string name="button_text_common">Common</string>
+    <string name="button_text_confidential">Confidential</string>
+    <string name="button_text_account">Account</string>
+    <string name="button_text_reset">Reset</string>
+    <string name="text_view_about">About</string>
+    <string name="button_text_about_us">About us</string>
+    <string name="button_text_write_author">Write author</string>
     <!-- / -->
 </resources>

@@ -31,7 +31,7 @@
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
                     android:drawableLeft="@drawable/ic_arrange_bring_forward"
-                    style="@style/ButtonProfileTheme"/>
+                    style="@style/ButtonThemeDefault"/>
 
                 <Button
                     android:layout_width="0dip"
@@ -40,7 +40,7 @@
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
                     android:drawableLeft="@drawable/ic_cisco_webex"
-                    style="@style/ButtonProfileTheme" />
+                    style="@style/ButtonThemeDefault" />
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
@@ -66,7 +66,7 @@
                     android:text="@string/button_text_music"
                     android:gravity="left|center_vertical"
                     android:drawableLeft="@drawable/ic_music_box"
-                    style="@style/ButtonProfileTheme" />
+                    style="@style/ButtonThemeDefault" />
 
 
                 <LinearLayout
@@ -81,7 +81,7 @@
                         android:text="@string/button_text_friends"
                         android:gravity="center"
                         android:drawableTop="@drawable/ic_account_star_variant"
-                        style="@style/ButtonProfileTheme"
+                        style="@style/ButtonThemeDefault"
                         android:layout_weight="1"
                         android:padding="10dp"/>
                     <Button
@@ -90,7 +90,7 @@
                         android:text="@string/button_text_subscribers"
                         android:gravity="center"
                         android:drawableTop="@drawable/ic_account_plus"
-                        style="@style/ButtonProfileTheme"
+                        style="@style/ButtonThemeDefault"
                         android:layout_weight="1"
                         android:padding="10dp"/>
                 </LinearLayout>
@@ -107,7 +107,7 @@
                         android:text="@string/button_text_wall"
                         android:gravity="center"
                         android:drawableTop="@drawable/ic_google_wallet"
-                        style="@style/ButtonProfileTheme"
+                        style="@style/ButtonThemeDefault"
                         android:layout_weight="1"
                         android:padding="10dp"/>
                     <Button
@@ -116,7 +116,7 @@
                         android:text="@string/button_text_groups"
                         android:gravity="center"
                         android:drawableTop="@drawable/ic_account_multiple"
-                        style="@style/ButtonProfileTheme"
+                        style="@style/ButtonThemeDefault"
                         android:layout_weight="1"
                         android:padding="10dp"/>
                 </LinearLayout>
@@ -142,7 +142,7 @@
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
                     android:drawableLeft="@drawable/ic_image"
-                    style="@style/ButtonProfileTheme"
+                    style="@style/ButtonThemeDefault"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"/>
 
@@ -153,7 +153,7 @@
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
                     android:drawableLeft="@drawable/ic_video"
-                    style="@style/ButtonProfileTheme"
+                    style="@style/ButtonThemeDefault"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"/>
 
@@ -164,7 +164,7 @@
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
                     android:drawableLeft="@drawable/ic_file_document_box"
-                    style="@style/ButtonProfileTheme"
+                    style="@style/ButtonThemeDefault"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"/>
 
@@ -175,7 +175,7 @@
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
                     android:drawableLeft="@drawable/ic_bookmark"
-                    style="@style/ButtonProfileTheme"
+                    style="@style/ButtonThemeDefault"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"/>
 
@@ -187,7 +187,7 @@
                     android:gravity="left|center_vertical"
                     android:drawableLeft="@drawable/ic_note"
                     android:layout_gravity="start"
-                    style="@style/ButtonProfileTheme"
+                    style="@style/ButtonThemeDefault"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"/>
 
@@ -198,7 +198,7 @@
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
                     android:drawableLeft="@drawable/ic_gamepad_variant"
-                    style="@style/ButtonProfileTheme"
+                    style="@style/ButtonThemeDefault"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"/>
 
