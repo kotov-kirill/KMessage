@@ -14,18 +14,10 @@
         <item name="actionModeStyle">@style/ActionModeDefault</item>
         <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace</item>
 
-        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_default</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_default
+        </item>
+
+        <item name="android:alertDialogTheme">@style/Theme_Sphinx_Dialog_Alert</item>
     </style>
 
-    <!-- ActionMode Styles -->
-    <style name="ActionModeDefault" parent="Base.Widget.AppCompat.ActionMode">
-        <!--<item name="background">@android:color/white</item>-->
-        <item name="titleTextStyle">@style/actionModeTitle</item>
-    </style>
-
-    <style name="actionModeTitle" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
-        <!--<item name="android:textColor">?android:attr/textColorSecondary</item>-->
-        <item name="android:textColor">@color/colorPrimaryDefault</item>
-    </style>
-    <!-- / -->
 </resources>

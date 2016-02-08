@@ -63,5 +63,6 @@
     <string name="action_new_friends">New Friend</string>
     <string name="tab_item_all_friends">All Friends</string>
     <string name="tab_item_on_line_friends">Online</string>
+    <string name="title_activity_settings">SettingsActivity</string>
     <!-- / -->
 </resources>

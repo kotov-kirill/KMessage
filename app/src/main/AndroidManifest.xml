@@ -29,10 +29,14 @@
             android:theme="@style/AppTheme" />
         <activity
             android:name=".FileDialog"
-            android:label="@string/title_activity_file_dialog"></activity>
+            android:label="@string/title_activity_file_dialog" />
         <activity
             android:name=".FriendsActivity.FriendsActivity"
             android:label="@string/title_activity_friends"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme"></activity>
     </application>
 

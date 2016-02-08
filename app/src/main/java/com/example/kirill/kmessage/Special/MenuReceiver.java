@@ -9,6 +9,7 @@ import com.example.kirill.kmessage.MainActivity;
 import com.example.kirill.kmessage.MessagesActivity.MessagesActivity;
 import com.example.kirill.kmessage.ProfileActivity;
 import com.example.kirill.kmessage.R;
+import com.example.kirill.kmessage.SettingsActivity;
 
 /**
  * Created on 04.02.2016.
@@ -30,6 +31,9 @@ public class MenuReceiver {
                 break;
             case R.id.menu_navigation_friends:
                 aClass = FriendsActivity.class;
+                break;
+            case R.id.menu_navigation_settings:
+                aClass = SettingsActivity.class;
                 break;
         }
         if(aClass == activity.getClass())

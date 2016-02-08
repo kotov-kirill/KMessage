@@ -32,7 +32,7 @@ public class ListViewAdapter extends ArrayAdapter<Friend>{
         ViewHolder viewHolder;
         if(row == null){
             viewHolder = new ViewHolder();
-            row = LayoutInflater.from(getContext()).inflate(R.layout.friends_list_view_layout, parent, false);
+            row = LayoutInflater.from(getContext()).inflate(R.layout.layout_list_view_friends, parent, false);
             viewHolder.avatarId = row.findViewById(R.id.avatar_id);
             viewHolder.FIO = (TextView) row.findViewById(R.id.FIO);
             viewHolder.isOnLine = row.findViewById(R.id.is_on_line);

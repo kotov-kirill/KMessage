@@ -34,7 +34,7 @@ public class ListViewAdapter extends ArrayAdapter<Message>{
         ViewHolder viewHolder;
         if(row == null){
             viewHolder = new ViewHolder();
-            row = LayoutInflater.from(getContext()).inflate(R.layout.message_list_view_layout, parent, false);
+            row = LayoutInflater.from(getContext()).inflate(R.layout.layout_list_view_message, parent, false);
             viewHolder.avatarId = row.findViewById(R.id.avatar_id);
             viewHolder.senderName = (TextView) row.findViewById(R.id.FIO);
             viewHolder.messageDate = (TextView) row.findViewById(R.id.message_date);

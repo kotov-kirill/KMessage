@@ -29,7 +29,7 @@ public class OnLineFriendsFragment extends AbstractFragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        this.view = inflater.inflate(R.layout.friends_fragment_layout, container, false);
+        this.view = inflater.inflate(R.layout.fragment_friends_layout, container, false);
         this.initComponents();
         return this.view;
     }
@@ -48,7 +48,7 @@ public class OnLineFriendsFragment extends AbstractFragment{
         };
         this.listView = (ListView) this.view.findViewById(R.id.list_view_friends);
         this.listView.setAdapter(new ListViewAdapter(this.getActivity(),
-                R.layout.friends_list_view_layout, this.friends));
+                R.layout.layout_list_view_friends, this.friends));
     }
 
     private int getRandomNumber(){
