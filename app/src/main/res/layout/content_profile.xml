@@ -152,7 +152,7 @@
                     android:text="@string/button_text_video"
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
-                    android:drawableLeft="@drawable/ic_video"
+                    android:drawableLeft="@drawable/ic_filmstrip"
                     style="@style/ButtonThemeDefault"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"/>

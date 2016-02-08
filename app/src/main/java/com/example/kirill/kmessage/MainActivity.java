@@ -1,6 +1,8 @@
 package com.example.kirill.kmessage;
 
 import android.os.Bundle;
+import android.support.design.internal.NavigationMenu;
+import android.support.design.internal.NavigationMenuView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -49,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+        this.navigationView.setCheckedItem(R.id.menu_navigation_news);
+
+        NavigationMenuView menuView = (NavigationMenuView) this.navigationView.getChildAt(0);
+        if(menuView != null)
+            menuView.setVerticalScrollBarEnabled(false);
     }
 
     @Override

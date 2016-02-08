@@ -18,6 +18,34 @@
             android:icon="@drawable/ic_account_star"
             android:title="@string/nav_menu_friends"
             android:id="@+id/menu_navigation_friends" />
+        <item
+            android:icon="@drawable/ic_account_plus_light"
+            android:title="@string/nav_menu_subscribers"
+            android:id="@+id/menu_navigation_subscribers" />
+        <item
+            android:icon="@drawable/ic_account_multiple_light"
+            android:title="@string/nav_menu_groups"
+            android:id="@+id/menu_navigation_groups" />
+        <item
+            android:icon="@drawable/ic_image_light"
+            android:title="@string/nav_menu_photos"
+            android:id="@+id/menu_navigation_photos" />
+        <item
+            android:icon="@drawable/ic_music_box_lights"
+            android:title="@string/nav_menu_music"
+            android:id="@+id/menu_navigation_music" />
+        <item
+            android:icon="@drawable/ic_filmstrip_lights"
+            android:title="@string/nav_menu_videos"
+            android:id="@+id/menu_navigation_videos" />
+        <item
+            android:icon="@drawable/ic_bookmark_light"
+            android:title="@string/nav_menu_favourites"
+            android:id="@+id/menu_navigation_favourites" />
+        <item
+            android:icon="@drawable/ic_magnify"
+            android:title="@string/nav_menu_search"
+            android:id="@+id/menu_navigation_search" />
     </group>
 
     <item android:title="@string/nav_sub_more">

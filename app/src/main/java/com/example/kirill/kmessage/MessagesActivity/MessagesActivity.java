@@ -3,6 +3,7 @@ package com.example.kirill.kmessage.MessagesActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.internal.NavigationMenuView;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
@@ -67,6 +68,11 @@ public class MessagesActivity extends AppCompatActivity {
                 return true;
             }
         });
+        this.navigationView.setCheckedItem(R.id.menu_navigation_messages);
+
+        NavigationMenuView menuView = (NavigationMenuView) this.navigationView.getChildAt(0);
+        if(menuView != null)
+            menuView.setVerticalScrollBarEnabled(false);
     }
 
     private void initFloatingActionButton() {
