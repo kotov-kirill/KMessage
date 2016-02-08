@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.MenuItem;
 
+import com.example.kirill.kmessage.AboutActivity;
 import com.example.kirill.kmessage.FriendsActivity.FriendsActivity;
 import com.example.kirill.kmessage.MainActivity;
 import com.example.kirill.kmessage.MessagesActivity.MessagesActivity;
@@ -34,6 +35,9 @@ public class MenuReceiver {
                 break;
             case R.id.menu_navigation_settings:
                 aClass = SettingsActivity.class;
+                break;
+            case R.id.menu_navigation_about:
+                aClass = AboutActivity.class;
                 break;
         }
         if(aClass == activity.getClass())
