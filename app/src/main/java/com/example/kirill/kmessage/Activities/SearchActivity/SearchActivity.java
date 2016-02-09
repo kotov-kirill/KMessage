@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.internal.NavigationMenuView;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -14,7 +13,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.example.kirill.kmessage.R;
@@ -34,7 +32,6 @@ public class SearchActivity extends AppCompatActivity {
     private void initComponents() {
         this.initToolbar();
         this.initNavigationView();
-        this.initFloatingButton();
     }
 
     private void initToolbar() {
@@ -63,15 +60,6 @@ public class SearchActivity extends AppCompatActivity {
         NavigationMenuView menuView = (NavigationMenuView) this.navigationView.getChildAt(0);
         if(menuView != null)
             menuView.setVerticalScrollBarEnabled(false);
-    }
-
-    private void initFloatingButton() {
-        FloatingActionButton actionButton = (FloatingActionButton) this.findViewById(R.id.fab);
-        actionButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-            }
-        });
     }
 
     @Override
