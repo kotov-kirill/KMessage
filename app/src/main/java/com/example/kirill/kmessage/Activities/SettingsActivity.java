@@ -1,19 +1,18 @@
-package com.example.kirill.kmessage;
+package com.example.kirill.kmessage.Activities;
 
 import android.os.Bundle;
-import android.support.design.internal.NavigationMenu;
 import android.support.design.internal.NavigationMenuView;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.kirill.kmessage.R;
 import com.example.kirill.kmessage.Special.MenuReceiver;
 
-public class MainActivity extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_settings);
         this.initComponents();
     }
 
@@ -47,30 +46,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 drawerLayout.closeDrawers();
-                MenuReceiver.menuReceiver(MainActivity.this, item);
+                MenuReceiver.menuReceiver(SettingsActivity.this, item);
                 return true;
             }
         });
-        this.navigationView.setCheckedItem(R.id.menu_navigation_news);
 
         NavigationMenuView menuView = (NavigationMenuView) this.navigationView.getChildAt(0);
         if(menuView != null)
             menuView.setVerticalScrollBarEnabled(false);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_new_note) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

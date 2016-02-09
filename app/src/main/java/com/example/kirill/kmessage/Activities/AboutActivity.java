@@ -1,7 +1,9 @@
-package com.example.kirill.kmessage;
+package com.example.kirill.kmessage.Activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.example.kirill.kmessage.R;
 
 public class AboutActivity extends AppCompatActivity {
     @Override

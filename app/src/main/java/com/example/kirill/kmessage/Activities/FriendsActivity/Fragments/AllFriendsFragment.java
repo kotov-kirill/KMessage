@@ -1,4 +1,4 @@
-package com.example.kirill.kmessage.FriendsActivity.Fragments;
+package com.example.kirill.kmessage.Activities.FriendsActivity.Fragments;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -9,8 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.example.kirill.kmessage.FriendsActivity.Fragments.ListView.Friend;
-import com.example.kirill.kmessage.FriendsActivity.Fragments.ListView.ListViewAdapter;
+import com.example.kirill.kmessage.Activities.FriendsActivity.Fragments.ListView.Friend;
+import com.example.kirill.kmessage.Activities.FriendsActivity.Fragments.ListView.ListViewAdapter;
 import com.example.kirill.kmessage.R;
 
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package com.example.kirill.kmessage.FriendsActivity.Fragments;
+package com.example.kirill.kmessage.Activities.FriendsActivity.Fragments;
 
 import android.support.v4.app.Fragment;
 

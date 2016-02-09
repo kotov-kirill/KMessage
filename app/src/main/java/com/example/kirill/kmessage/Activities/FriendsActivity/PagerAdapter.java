@@ -1,4 +1,4 @@
-package com.example.kirill.kmessage.FriendsActivity;
+package com.example.kirill.kmessage.Activities.FriendsActivity;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
@@ -6,9 +6,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 
-import com.example.kirill.kmessage.FriendsActivity.Fragments.AbstractFragment;
-import com.example.kirill.kmessage.FriendsActivity.Fragments.AllFriendsFragment;
-import com.example.kirill.kmessage.FriendsActivity.Fragments.OnLineFriendsFragment;
+import com.example.kirill.kmessage.Activities.FriendsActivity.Fragments.AbstractFragment;
+import com.example.kirill.kmessage.Activities.FriendsActivity.Fragments.AllFriendsFragment;
+import com.example.kirill.kmessage.Activities.FriendsActivity.Fragments.OnLineFriendsFragment;
 
 import java.util.HashMap;
 import java.util.Map;

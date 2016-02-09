@@ -1,4 +1,4 @@
-package com.example.kirill.kmessage.MessagesActivity;
+package com.example.kirill.kmessage.Activities.MessagesActivity;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -14,7 +14,7 @@ import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.example.kirill.kmessage.FileDialog;
+import com.example.kirill.kmessage.Activities.FileDialog;
 import com.example.kirill.kmessage.R;
 
 import java.io.BufferedWriter;

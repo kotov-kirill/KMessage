@@ -1,4 +1,4 @@
-package com.example.kirill.kmessage;
+package com.example.kirill.kmessage.Activities;
 
 import android.os.Bundle;
 import android.support.design.internal.NavigationMenuView;
@@ -10,26 +10,27 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.kirill.kmessage.R;
 import com.example.kirill.kmessage.Special.MenuReceiver;
 
-public class ProfileActivity extends AppCompatActivity {
-    private DrawerLayout drawerLayout;
+public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
+    private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_main);
         this.initComponents();
     }
 
     private void initComponents() {
-        this.initToolbar();
+        this.initToolBar();
         this.initNavigationView();
     }
 
-    private void initToolbar() {
+    private void initToolBar() {
         this.toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
@@ -46,11 +47,11 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 drawerLayout.closeDrawers();
-                MenuReceiver.menuReceiver(ProfileActivity.this, item);
+                MenuReceiver.menuReceiver(MainActivity.this, item);
                 return true;
             }
         });
-        this.navigationView.setCheckedItem(R.id.menu_navigation_profile);
+        this.navigationView.setCheckedItem(R.id.menu_navigation_news);
 
         NavigationMenuView menuView = (NavigationMenuView) this.navigationView.getChildAt(0);
         if(menuView != null)
@@ -59,14 +60,14 @@ public class ProfileActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_profile, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_new_search) {
+        if (id == R.id.action_new_note) {
             return true;
         }
 

@@ -1,4 +1,4 @@
-package com.example.kirill.kmessage;
+package com.example.kirill.kmessage.Activities;
 
 import android.app.AlertDialog;
 import android.app.ListActivity;
@@ -14,6 +14,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+
+import com.example.kirill.kmessage.R;
 
 import java.io.File;
 import java.util.ArrayList;

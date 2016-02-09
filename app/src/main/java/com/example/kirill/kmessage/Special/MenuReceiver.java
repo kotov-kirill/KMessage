@@ -4,13 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.view.MenuItem;
 
-import com.example.kirill.kmessage.AboutActivity;
-import com.example.kirill.kmessage.FriendsActivity.FriendsActivity;
-import com.example.kirill.kmessage.MainActivity;
-import com.example.kirill.kmessage.MessagesActivity.MessagesActivity;
-import com.example.kirill.kmessage.ProfileActivity;
+import com.example.kirill.kmessage.Activities.AboutActivity;
+import com.example.kirill.kmessage.Activities.FriendsActivity.FriendsActivity;
+import com.example.kirill.kmessage.Activities.MainActivity;
+import com.example.kirill.kmessage.Activities.MessagesActivity.MessagesActivity;
+import com.example.kirill.kmessage.Activities.ProfileActivity;
+import com.example.kirill.kmessage.Activities.SearchActivity.SearchActivity;
 import com.example.kirill.kmessage.R;
-import com.example.kirill.kmessage.SettingsActivity;
+import com.example.kirill.kmessage.Activities.SettingsActivity;
 
 /**
  * Created on 04.02.2016.
@@ -38,6 +39,9 @@ public class MenuReceiver {
                 break;
             case R.id.menu_navigation_about:
                 aClass = AboutActivity.class;
+                break;
+            case R.id.menu_navigation_search:
+                aClass = SearchActivity.class;
                 break;
         }
         if(aClass == activity.getClass())

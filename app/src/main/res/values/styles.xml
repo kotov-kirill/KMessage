@@ -4,15 +4,15 @@
         <item name="colorPrimary">@color/colorPrimaryDefault</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDarkDefault</item>
         <item name="colorAccent">@color/colorAccentDefault</item>
+        <item name="colorControlActivated">@android:color/white</item>
 
         <item name="actionModeStyle">@style/ActionModeDefault</item>
         <item name="windowActionModeOverlay">true</item>
         <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace</item>
 
-        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_default
-        </item>
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_default</item>
 
-        <item name="android:alertDialogTheme">@style/Theme_Sphinx_Dialog_Alert</item>
+        <item name="android:alertDialogTheme">@style/Theme_Dialog_Alert</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -52,7 +52,7 @@
     <!-- / -->
 
     <!-- AlertDialog Styles -->
-    <style name="Theme_Sphinx_Dialog_Alert" parent="@android:style/Theme.Holo.Light.Dialog">
+    <style name="Theme_Dialog_Alert" parent="@android:style/Theme.Holo.Light.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowTitleStyle">@style/DialogWindowTitle_Sphinx</item>
         <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>

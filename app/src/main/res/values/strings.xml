@@ -13,6 +13,10 @@
     <string name="nav_menu_subscribers">Subscribers</string>
     <string name="nav_menu_groups">Groups</string>
     <string name="nav_menu_photos">Photos</string>
+    <string name="nav_menu_music">Music</string>
+    <string name="nav_menu_videos">Videos</string>
+    <string name="nav_menu_favourites">Favourites</string>
+    <string name="nav_menu_search">Search</string>
     <!-- / -->
 
     <!-- Profile Activity -->
@@ -79,6 +83,7 @@
     <string name="text_view_about">About</string>
     <string name="button_text_about_us">About us</string>
     <string name="button_text_write_author">Write author</string>
+    <string name="text_view_settings">Settings</string>
     <!-- / -->
 
     <!-- AboutActivity -->
@@ -86,10 +91,18 @@
     <string name="text_view_version">Version 1.01.123</string>
     <string name="text_view_author">© 2016 Rakov Kirill.</string>
     <string name="text_view_rights_reserved">All rights reserved.</string>
-    <string name="nav_menu_music">Music</string>
-    <string name="nav_menu_videos">Videos</string>
-    <string name="nav_menu_favourites">Favourites</string>
-    <string name="nav_menu_search">Search</string>
-    <string name="text_view_settings">Settings</string>
+    <!-- / -->
+
+    <!-- SearchActivity -->
+    <string name="title_activity_search">Search</string>
+    <string name="search_hint">Search</string>
+    <string name="alert_dialog_title_type_search">What to look for?</string>
+    <array name="alert_dialog_menu_items">
+        <item>Search Friends</item>
+        <item>Search Music</item>
+        <item>Search Videos</item>
+        <item>Search Groups</item>
+        <item>Search Messages</item>
+    </array>
     <!-- / -->
 </resources>

@@ -17,7 +17,7 @@
         <item name="android:activatedBackgroundIndicator">@drawable/activated_background_default
         </item>
 
-        <item name="android:alertDialogTheme">@style/Theme_Sphinx_Dialog_Alert</item>
+        <item name="android:alertDialogTheme">@style/Theme_Dialog_Alert</item>
     </style>
 
 </resources>

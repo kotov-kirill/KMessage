@@ -1,4 +1,4 @@
-package com.example.kirill.kmessage.FriendsActivity.Fragments.ListView;
+package com.example.kirill.kmessage.Activities.FriendsActivity.Fragments.ListView;
 
 /**
  * Created on 05.02.2016.

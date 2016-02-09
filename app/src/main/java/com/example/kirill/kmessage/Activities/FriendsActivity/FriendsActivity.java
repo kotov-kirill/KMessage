@@ -1,4 +1,4 @@
-package com.example.kirill.kmessage.FriendsActivity;
+package com.example.kirill.kmessage.Activities.FriendsActivity;
 
 import android.os.Bundle;
 import android.support.design.internal.NavigationMenuView;

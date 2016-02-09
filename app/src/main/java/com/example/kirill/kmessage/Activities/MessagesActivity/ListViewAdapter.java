@@ -1,4 +1,4 @@
-package com.example.kirill.kmessage.MessagesActivity;
+package com.example.kirill.kmessage.Activities.MessagesActivity;
 
 import android.content.Context;
 import android.view.LayoutInflater;
