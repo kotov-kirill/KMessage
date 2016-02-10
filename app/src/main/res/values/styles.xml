@@ -21,6 +21,7 @@
     <style name="AppTheme.AppBarOverlay.Light" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="titleTextColor">@android:color/white</item>
         <item name="colorControlNormal">@android:color/white</item>
+        <item name="colorControlActivated">@color/colorPrimaryDarkDefault</item>
     </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

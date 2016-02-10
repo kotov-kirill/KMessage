@@ -44,7 +44,7 @@ public class MultiChoiceModeListenerImpl implements AbsListView.MultiChoiceModeL
 
     @Override
     public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-        mode.getMenuInflater().inflate(R.menu.message_list_view_menu, menu);
+        mode.getMenuInflater().inflate(R.menu.menu_list_view_message, menu);
         return true;
     }
 

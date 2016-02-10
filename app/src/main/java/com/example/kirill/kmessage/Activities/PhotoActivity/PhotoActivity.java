@@ -3,6 +3,8 @@ package com.example.kirill.kmessage.Activities.PhotoActivity;
 import android.os.Bundle;
 import android.support.design.internal.NavigationMenuView;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -17,6 +19,8 @@ public class PhotoActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,7 @@ public class PhotoActivity extends AppCompatActivity {
     private void initComponents() {
         this.initToolBar();
         this.initNavigationView();
+        this.initTabs();
     }
 
     private void initToolBar() {
@@ -56,6 +61,14 @@ public class PhotoActivity extends AppCompatActivity {
         NavigationMenuView menuView = (NavigationMenuView) this.navigationView.getChildAt(0);
         if(menuView != null)
             menuView.setVerticalScrollBarEnabled(false);
+    }
+
+    private void initTabs() {
+        this.viewPager = (ViewPager) this.findViewById(R.id.view_pager);
+        this.viewPager.setAdapter(new PagerAdapter(this, this.getSupportFragmentManager()));
+
+        this.tabLayout = (TabLayout) this.findViewById(R.id.tab_layout);
+        this.tabLayout.setupWithViewPager(this.viewPager);
     }
 
     @Override

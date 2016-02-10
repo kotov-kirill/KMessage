@@ -66,6 +66,9 @@
     <string name="select_open">Open</string>
     <string name="create_open">Save</string>
     <string name="nav_menu_friends">Friends</string>
+    <!-- / -->
+
+    <!-- FriendsActivity -->
     <string name="title_activity_friends">Friends</string>
     <string name="action_new_friends">New Friend</string>
     <string name="tab_item_all_friends">All Friends</string>
@@ -108,5 +111,7 @@
 
     <!-- PhotoActivity -->
     <string name="title_activity_photo">Photo</string>
+    <string name="tab_item_all_photos">All Photos</string>
+    <string name="tab_item_albums">Albums</string>
     <!-- / -->
 </resources>
