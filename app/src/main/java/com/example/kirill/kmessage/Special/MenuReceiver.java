@@ -8,6 +8,7 @@ import com.example.kirill.kmessage.Activities.AboutActivity;
 import com.example.kirill.kmessage.Activities.FriendsActivity.FriendsActivity;
 import com.example.kirill.kmessage.Activities.MainActivity;
 import com.example.kirill.kmessage.Activities.MessagesActivity.MessagesActivity;
+import com.example.kirill.kmessage.Activities.PhotoActivity.PhotoActivity;
 import com.example.kirill.kmessage.Activities.ProfileActivity;
 import com.example.kirill.kmessage.Activities.SearchActivity.SearchActivity;
 import com.example.kirill.kmessage.R;
@@ -39,6 +40,9 @@ public class MenuReceiver {
                 break;
             case R.id.menu_navigation_about:
                 aClass = AboutActivity.class;
+                break;
+            case R.id.menu_navigation_photos:
+                aClass = PhotoActivity.class;
                 break;
             case R.id.menu_navigation_search:
                 aClass = SearchActivity.class;

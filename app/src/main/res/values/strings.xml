@@ -12,7 +12,7 @@
     <string name="view_navigation_close">Close</string>
     <string name="nav_menu_subscribers">Subscribers</string>
     <string name="nav_menu_groups">Groups</string>
-    <string name="nav_menu_photos">Photos</string>
+    <string name="nav_menu_photos">Photo</string>
     <string name="nav_menu_music">Music</string>
     <string name="nav_menu_videos">Videos</string>
     <string name="nav_menu_favourites">Favourites</string>
@@ -104,5 +104,9 @@
         <item>Search Groups</item>
         <item>Search Messages</item>
     </array>
+    <!-- / -->
+
+    <!-- PhotoActivity -->
+    <string name="title_activity_photo">Photo</string>
     <!-- / -->
 </resources>
