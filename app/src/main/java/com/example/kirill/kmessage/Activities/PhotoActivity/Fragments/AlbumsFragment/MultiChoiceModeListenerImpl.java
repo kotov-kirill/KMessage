@@ -14,8 +14,6 @@ import android.widget.ListView;
 
 import com.example.kirill.kmessage.R;
 
-import java.util.Objects;
-
 /**
  * Created on 10.02.2016.
  * @author Rakov Kirill
