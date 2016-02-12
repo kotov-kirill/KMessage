@@ -17,6 +17,8 @@
     <string name="nav_menu_videos">Videos</string>
     <string name="nav_menu_favourites">Favourites</string>
     <string name="nav_menu_search">Search</string>
+    <string name="nav_header_text_title">Arkanov Sergey</string>
+    <string name="nav_header_text_mail">arkanov-sergey@gmail.com</string>
     <!-- / -->
 
     <!-- Profile Activity -->
@@ -37,8 +39,8 @@
     <string name="button_text_more">More</string>
     <string name="button_text_online">Online</string>
     <string name="button_text_exit">Exit</string>
-    <string name="profile_activity_text_title">Kotov Kirill</string>
-    <string name="profile_activity_text">id: 311239708\ne-mail: kirsoft95@mail.ru</string>
+    <string name="profile_activity_text_title">Arkanov Sergey</string>
+    <string name="profile_activity_text">id: 311239708\ne-mail: arkanov-sergey@gmail.ru</string>
     <string name="profile_activity_text_location">Russia, Moscow</string>
     <!-- / -->
 
@@ -113,5 +115,7 @@
     <string name="title_activity_photo">Photo</string>
     <string name="tab_item_all_photos">All Photos</string>
     <string name="tab_item_albums">Albums</string>
+    <string name="title_activity_page_image">Gallery</string>
+    <string name="descr_image">Image</string>
     <!-- / -->
 </resources>

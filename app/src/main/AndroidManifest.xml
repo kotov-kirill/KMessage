@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -49,6 +50,10 @@
         <activity
             android:name=".Activities.PhotoActivity.PhotoActivity"
             android:label="@string/title_activity_photo"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".Activities.PhotoActivity.Fragments.AllPhotosFragment.PagerImageActivity"
+            android:label="@string/title_activity_page_image"
             android:theme="@style/AppTheme"></activity>
     </application>
 

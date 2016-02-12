@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import com.example.kirill.kmessage.Activities.PhotoActivity.Fragments.AbstractFragment;
 import com.example.kirill.kmessage.Activities.PhotoActivity.Fragments.AlbumsFragment.AlbumsFragment;
-import com.example.kirill.kmessage.Activities.PhotoActivity.Fragments.AllPhotosFragment;
+import com.example.kirill.kmessage.Activities.PhotoActivity.Fragments.AllPhotosFragment.AllPhotosFragment;
 
 import java.util.HashMap;
 import java.util.Map;
