@@ -25,6 +25,8 @@ import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 
+import uk.co.senab.photoview.PhotoView;
+
 public class PagerImageActivity extends AppCompatActivity {
 
     @Override
@@ -78,10 +80,10 @@ public class PagerImageActivity extends AppCompatActivity {
         public Object instantiateItem(ViewGroup view, int position) {
             View imageLayout = inflater.inflate(R.layout.layout_pager_image, view, false);
             assert imageLayout != null;
-            ImageView imageView = (ImageView) imageLayout.findViewById(R.id.image);
+            PhotoView photoView = (PhotoView) imageLayout.findViewById(R.id.image);
             final ProgressBar spinner = (ProgressBar) imageLayout.findViewById(R.id.loading);
 
-            ImageLoader.getInstance().displayImage(IMAGE_URLS[position], imageView, options, new SimpleImageLoadingListener() {
+            ImageLoader.getInstance().displayImage(IMAGE_URLS[position], photoView, options, new SimpleImageLoadingListener() {
                 @Override
                 public void onLoadingStarted(String imageUri, View view) {
                     spinner.setVisibility(View.VISIBLE);
