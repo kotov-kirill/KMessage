@@ -34,7 +34,7 @@ public class AlbumsFragment extends AbstractFragment {
     private void initComponents() {
         this.albums = new ArrayList<Album>(){
             {
-                add(new Album(R.drawable.about, "Material Design Wallpapers"));
+                add(new Album(R.drawable.about_r, "Material Design Wallpapers"));
                 add(new Album(R.drawable.design_wallpaper, "Design Wallpapers"));
                 add(new Album(R.drawable.design_background, "Design Backgrounds"));
             }

@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.internal.NavigationMenuView;
 import android.support.design.widget.NavigationView;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -68,10 +69,23 @@ public class SearchActivity extends AppCompatActivity {
 
         MenuItem menuItem = menu.findItem(R.id.action_new_search);
         menuItem.expandActionView();
+        MenuItemCompat.setOnActionExpandListener(menuItem, new MenuItemCompat.OnActionExpandListener() {
+            @Override
+            public boolean onMenuItemActionExpand(MenuItem item) {
+                return false;
+            }
+
+            @Override
+            public boolean onMenuItemActionCollapse(MenuItem item) {
+                SearchActivity.this.finish();
+                return false;
+            }
+        });
         SearchView searchView = (SearchView) menuItem.getActionView();
         searchView.setQueryHint(this.getResources().getString(R.string.action_search));
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             private TextView textView = (TextView) findViewById(R.id.text_query_search);
+
             @Override
             public boolean onQueryTextSubmit(String query) {
                 textView.setText(query);
