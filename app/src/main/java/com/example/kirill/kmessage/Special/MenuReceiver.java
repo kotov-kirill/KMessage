@@ -52,5 +52,6 @@ public class MenuReceiver {
             return;
         Intent intent = new Intent(activity, aClass);
         activity.startActivity(intent);
+        //activity.finish();
     }
 }
