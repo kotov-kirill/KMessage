@@ -36,7 +36,7 @@
             android:label="@string/title_activity_friends"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Activities.SettingsActivity"
+            android:name=".Activities.SettingsActivity.SettingsActivity"
             android:label="@string/title_activity_settings"
             android:theme="@style/AppTheme" />
         <activity
@@ -50,10 +50,14 @@
         <activity
             android:name=".Activities.PhotoActivity.PhotoActivity"
             android:label="@string/title_activity_photo"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".Activities.PhotoActivity.Fragments.AllPhotosFragment.PagerImageActivity"
             android:label="@string/title_activity_page_image"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.SettingsActivity.CommonSettingsActivity"
+            android:label="@string/title_activity_common_settings"
             android:theme="@style/AppTheme"></activity>
     </application>
 

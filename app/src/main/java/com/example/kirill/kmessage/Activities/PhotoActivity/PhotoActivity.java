@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.kirill.kmessage.R;
 import com.example.kirill.kmessage.Special.MenuReceiver;
@@ -80,7 +81,9 @@ public class PhotoActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_new_note) {
+        if (id == R.id.action_new_search) {
+            Toast.makeText(PhotoActivity.this, String.format("Total memory = %s",
+                    (int) (Runtime.getRuntime().totalMemory() / 1024)), Toast.LENGTH_SHORT).show();
             return true;
         }
 

@@ -117,5 +117,9 @@
     <string name="tab_item_albums">Albums</string>
     <string name="title_activity_page_image">Gallery</string>
     <string name="descr_image">Image</string>
+    <string name="title_activity_common_settings">Common</string>
+    <string name="text_view_cache">Cache</string>
+    <string name="button_text_clear_cache">Clear cache images</string>
+    <string name="button_text_memory">Display size application</string>
     <!-- / -->
 </resources>

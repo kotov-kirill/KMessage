@@ -12,7 +12,7 @@ import com.example.kirill.kmessage.Activities.PhotoActivity.PhotoActivity;
 import com.example.kirill.kmessage.Activities.ProfileActivity;
 import com.example.kirill.kmessage.Activities.SearchActivity.SearchActivity;
 import com.example.kirill.kmessage.R;
-import com.example.kirill.kmessage.Activities.SettingsActivity;
+import com.example.kirill.kmessage.Activities.SettingsActivity.SettingsActivity;
 
 /**
  * Created on 04.02.2016.
@@ -52,6 +52,7 @@ public class MenuReceiver {
             return;
         Intent intent = new Intent(activity, aClass);
         activity.startActivity(intent);
-        //activity.finish();
+        if(aClass != AboutActivity.class)
+            activity.finish();
     }
 }

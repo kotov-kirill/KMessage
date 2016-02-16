@@ -97,7 +97,8 @@
                     android:drawableLeft="@drawable/ic_format_list_bulleted"
                     style="@style/ButtonThemeDefault"
                     android:paddingTop="8dp"
-                    android:paddingBottom="8dp"/>
+                    android:paddingBottom="8dp"
+                    android:id="@+id/button_settings_common" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

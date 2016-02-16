@@ -147,9 +147,6 @@ public class PagerImageActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_save:
-                ImageLoader.getInstance().clearMemoryCache();
-                ImageLoader.getInstance().clearDiskCache();
-                Toast.makeText(this, "Sucessfull clear", Toast.LENGTH_SHORT).show();
                 return true;
         }
         return super.onOptionsItemSelected(item);
