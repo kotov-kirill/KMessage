@@ -10,8 +10,7 @@
         <item name="windowActionModeOverlay">true</item>
         <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace</item>
 
-        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_default
-        </item>
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_default</item>
 
         <item name="android:alertDialogTheme">@style/Theme_Dialog_Alert</item>
     </style>
@@ -63,8 +62,7 @@
     </style>
 
     <style name="DialogWindowTitle_Sphinx">
-        <item name="android:textAppearance">@android:style/TextAppearance.Holo.DialogWindowTitle
-        </item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Holo.DialogWindowTitle</item>
         <item name="android:textColor">@color/colorPrimaryDefault</item>
     </style>
     <!-- / -->
