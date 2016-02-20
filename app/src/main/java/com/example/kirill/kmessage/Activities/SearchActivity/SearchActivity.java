@@ -128,14 +128,4 @@ public class SearchActivity extends AppCompatActivity {
             titleDivider.setBackgroundResource(R.color.colorPrimaryDefault);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_new_search) {
-            this.getTypeSearch((SearchView) item.getActionView());
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

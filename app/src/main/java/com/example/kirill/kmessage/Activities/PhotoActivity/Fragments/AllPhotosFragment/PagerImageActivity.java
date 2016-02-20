@@ -2,11 +2,14 @@ package com.example.kirill.kmessage.Activities.PhotoActivity.Fragments.AllPhotos
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -28,26 +31,45 @@ import com.nostra13.universalimageloader.utils.IoUtils;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.InputStream;
 import java.io.OutputStream;
 
 import uk.co.senab.photoview.PhotoView;
+import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class PagerImageActivity extends AppCompatActivity {
+    private Toolbar toolbar;
     private ViewPager pager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pager_image);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            this.getWindow().setStatusBarColor(Color.BLACK);
+        }
         this.initComponents();
     }
 
     private void initComponents() {
+        initToolbar();
+        initViewPager();
+    }
+
+    private void initToolbar() {
+        this.toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        this.toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
+    private void initViewPager() {
         pager = (ViewPager) this.findViewById(R.id.pager);
         pager.setAdapter(new ImageAdapter(this));
         pager.setCurrentItem(getIntent().getExtras().getInt(Constants.Extra.IMAGE_POSITION, 0));
@@ -55,10 +77,12 @@ public class PagerImageActivity extends AppCompatActivity {
 
     private static class ImageAdapter extends PagerAdapter {
 
-        private static final String[] IMAGE_URLS = Constants.IMAGES;
+        private  final String[] IMAGE_URLS = Constants.IMAGES;
 
         private LayoutInflater inflater;
         private DisplayImageOptions options;
+
+        private Context context;
 
         ImageAdapter(Context context) {
             inflater = LayoutInflater.from(context);
@@ -73,6 +97,8 @@ public class PagerImageActivity extends AppCompatActivity {
                     .considerExifParams(true)
                     .displayer(new FadeInBitmapDisplayer(300))
                     .build();
+
+            this.context = context;
         }
 
         @Override
@@ -90,6 +116,18 @@ public class PagerImageActivity extends AppCompatActivity {
             View imageLayout = inflater.inflate(R.layout.layout_pager_image, view, false);
             assert imageLayout != null;
             PhotoView photoView = (PhotoView) imageLayout.findViewById(R.id.image);
+            photoView.setOnPhotoTapListener(new PhotoViewAttacher.OnPhotoTapListener() {
+                @Override
+                public void onPhotoTap(View view, float x, float y) {
+                    ActionBar actionBar = ((PagerImageActivity)context).getSupportActionBar();
+                    if(actionBar.isShowing()) {
+                        actionBar.hide();
+                    }
+                    else {
+                        actionBar.show();
+                    }
+                }
+            });
             final ProgressBar spinner = (ProgressBar) imageLayout.findViewById(R.id.loading);
 
             ImageLoader.getInstance().displayImage(IMAGE_URLS[position], photoView, options, new SimpleImageLoadingListener() {
