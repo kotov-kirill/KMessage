@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ActionMode Styles -->
+    <style name="ActionModeDefault" parent="Base.Widget.AppCompat.ActionMode">
+        <!--<item name="background">@android:color/white</item>-->
+        <item name="titleTextStyle">@style/actionModeTitle</item>
+    </style>
+
+    <style name="actionModeTitle" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <!--<item name="android:textColor">?android:attr/textColorSecondary</item>-->
+        <item name="android:textColor">@color/colorPrimaryDefault</item>
+    </style>
+    <!-- / -->
+
+    <!-- Default Buttons Styles -->
+    <style name="ButtonThemeDefault" parent="android:Widget.Button">
+        <item name="android:minHeight">37dip</item>
+        <item name="android:minWidth">64dip</item>
+        <item name="android:background">@drawable/button_theme_default_background</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+
+    <style name="ButtonProfileThemeExit" parent="ButtonThemeDefault">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:background">@drawable/button_exit_profile_background</item>
+    </style>
+    <!-- / -->
+
+    <!-- AlertDialog Styles -->
+    <style name="Theme_Dialog_Alert" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle_Sphinx</item>
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+        <item name="android:borderlessButtonStyle">@style/ButtonThemeDefault</item>
+    </style>
+
+    <style name="DialogWindowTitle_Sphinx">
+        <item name="android:textAppearance">@android:style/TextAppearance.Holo.DialogWindowTitle</item>
+        <item name="android:textColor">@color/colorPrimaryDefault</item>
+    </style>
+    <!-- / -->
+
+    <!-- SettingsActivity Buttons Styles -->
+    <style name="ButtonSettings" parent="ButtonThemeDefault">
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:background">@drawable/button_theme_default_background</item>
+        <item name="android:textColor">@color/colorPrimaryDefault</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">start</item>
+        <item name="android:paddingLeft">20dp</item>
+    </style>
+    <!-- / -->
+
+    <style name="ProgressBarStyle" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_bar</item>
+    </style>
+</resources>

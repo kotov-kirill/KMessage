@@ -14,7 +14,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.kirill.kmessage.R;
-import com.example.kirill.kmessage.Special.MenuReceiver;
+import com.example.kirill.kmessage.Special.NavigationMenuReceiver;
 
 public class PhotoActivity extends AppCompatActivity {
     private Toolbar toolbar;
@@ -53,7 +53,7 @@ public class PhotoActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 drawerLayout.closeDrawers();
-                MenuReceiver.menuReceiver(PhotoActivity.this, item);
+                NavigationMenuReceiver.menuReceiver(PhotoActivity.this, item);
                 return true;
             }
         });
@@ -81,7 +81,7 @@ public class PhotoActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_new_search) {
+        if (id == R.id.action_search) {
             Toast.makeText(PhotoActivity.this, String.format("Total memory = %s",
                     (int) (Runtime.getRuntime().totalMemory() / 1024)), Toast.LENGTH_SHORT).show();
             return true;

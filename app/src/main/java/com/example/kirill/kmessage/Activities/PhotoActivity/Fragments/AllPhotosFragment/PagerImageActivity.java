@@ -3,6 +3,7 @@ package com.example.kirill.kmessage.Activities.PhotoActivity.Fragments.AllPhotos
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -23,10 +24,19 @@ import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
+import com.nostra13.universalimageloader.utils.IoUtils;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 import uk.co.senab.photoview.PhotoView;
 
 public class PagerImageActivity extends AppCompatActivity {
+    private ViewPager pager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +48,7 @@ public class PagerImageActivity extends AppCompatActivity {
     }
 
     private void initComponents() {
-        ViewPager pager = (ViewPager) this.findViewById(R.id.pager);
+        pager = (ViewPager) this.findViewById(R.id.pager);
         pager.setAdapter(new ImageAdapter(this));
         pager.setCurrentItem(getIntent().getExtras().getInt(Constants.Extra.IMAGE_POSITION, 0));
     }
@@ -147,8 +157,34 @@ public class PagerImageActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_save:
+                this.actionSaveImage();
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void actionSaveImage() {
+        if(!Environment.getExternalStorageState()
+                .equals(Environment.MEDIA_MOUNTED)){
+            Toast.makeText(PagerImageActivity.this, R.string.toast_message_text_sd_card_not_available, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        int position = this.pager.getCurrentItem();
+        File pathImage = ImageLoader.getInstance().getDiskCache().get(Constants.IMAGES[position]);
+        if(pathImage != null)
+            try {
+                FileInputStream sourceStream = new FileInputStream(pathImage);
+                File pathDest = new File(Environment.getExternalStorageDirectory(), "KMessage/KMessageImages");
+                if(!pathDest.exists())
+                    pathDest.mkdirs();
+                OutputStream targetStream = new FileOutputStream(
+                        new File(pathDest, pathImage.getName() + ".png"));
+                IoUtils.copyStream(sourceStream, targetStream, null);
+                sourceStream.close();
+                targetStream.close();
+                Toast.makeText(PagerImageActivity.this, "Saved to " + pathDest, Toast.LENGTH_LONG).show();
+            } catch (java.io.IOException e) {
+                e.printStackTrace();
+            }
     }
 }

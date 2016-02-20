@@ -17,7 +17,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.kirill.kmessage.R;
-import com.example.kirill.kmessage.Special.MenuReceiver;
+import com.example.kirill.kmessage.Special.NavigationMenuReceiver;
 
 public class SearchActivity extends AppCompatActivity {
     private Toolbar toolbar;
@@ -52,7 +52,7 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 drawerLayout.closeDrawers();
-                MenuReceiver.menuReceiver(SearchActivity.this, item);
+                NavigationMenuReceiver.menuReceiver(SearchActivity.this, item);
                 return true;
             }
         });
@@ -67,7 +67,7 @@ public class SearchActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_search, menu);
 
-        MenuItem menuItem = menu.findItem(R.id.action_new_search);
+        MenuItem menuItem = menu.findItem(R.id.action_search);
         menuItem.expandActionView();
         MenuItemCompat.setOnActionExpandListener(menuItem, new MenuItemCompat.OnActionExpandListener() {
             @Override

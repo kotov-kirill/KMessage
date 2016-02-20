@@ -121,5 +121,9 @@
     <string name="text_view_cache">Cache</string>
     <string name="button_text_clear_cache">Clear cache images</string>
     <string name="button_text_memory">Display size application</string>
+    <string name="title_activity_new_note">NewNoteActivity</string>
+    <string name="title_activity_new_message">NewMessageActivity</string>
+    <string name="title_activity_new_friend">NewFriendActivity</string>
+    <string name="toast_message_text_sd_card_not_available">SD-Card not available</string>
     <!-- / -->
 </resources>

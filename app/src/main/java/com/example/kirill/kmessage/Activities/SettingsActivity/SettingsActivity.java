@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.kirill.kmessage.R;
-import com.example.kirill.kmessage.Special.MenuReceiver;
+import com.example.kirill.kmessage.Special.NavigationMenuReceiver;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener{
     private Toolbar toolbar;
@@ -52,7 +52,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 drawerLayout.closeDrawers();
-                MenuReceiver.menuReceiver(SettingsActivity.this, item);
+                NavigationMenuReceiver.menuReceiver(SettingsActivity.this, item);
                 return true;
             }
         });

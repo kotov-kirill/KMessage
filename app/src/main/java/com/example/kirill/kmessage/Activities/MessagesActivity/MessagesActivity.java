@@ -19,6 +19,7 @@ import android.widget.ListView;
 
 import com.example.kirill.kmessage.R;
 import com.example.kirill.kmessage.Special.MenuReceiver;
+import com.example.kirill.kmessage.Special.NavigationMenuReceiver;
 
 import java.util.GregorianCalendar;
 import java.util.LinkedList;
@@ -64,7 +65,7 @@ public class MessagesActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 drawerLayout.closeDrawers();
-                MenuReceiver.menuReceiver(MessagesActivity.this, item);
+                NavigationMenuReceiver.menuReceiver(MessagesActivity.this, item);
                 return true;
             }
         });
@@ -131,11 +132,7 @@ public class MessagesActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_new_note) {
-            return true;
-        }
-
+        MenuReceiver.menuReceiver(this, item);
         return super.onOptionsItemSelected(item);
     }
 }

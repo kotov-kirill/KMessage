@@ -2,13 +2,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/action_new_search"
+        android:id="@+id/action_search"
         android:title="@string/action_search"
         app:showAsAction="always"
         android:icon="@drawable/ic_magnify" />
 
     <item
-        android:id="@+id/action_new_note"
+        android:id="@+id/action_new_message"
         android:title="@string/action_new_note"
         app:showAsAction="always"
         android:icon="@drawable/ic_pencil_box_outline" />

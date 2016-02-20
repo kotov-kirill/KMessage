@@ -12,6 +12,7 @@ import android.view.MenuItem;
 
 import com.example.kirill.kmessage.R;
 import com.example.kirill.kmessage.Special.MenuReceiver;
+import com.example.kirill.kmessage.Special.NavigationMenuReceiver;
 
 public class MainActivity extends AppCompatActivity {
     private Toolbar toolbar;
@@ -47,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 drawerLayout.closeDrawers();
-                MenuReceiver.menuReceiver(MainActivity.this, item);
+                NavigationMenuReceiver.menuReceiver(MainActivity.this, item);
                 return true;
             }
         });
@@ -66,11 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_new_note) {
-            return true;
-        }
-
+        MenuReceiver.menuReceiver(this, item);
         return super.onOptionsItemSelected(item);
     }
 }

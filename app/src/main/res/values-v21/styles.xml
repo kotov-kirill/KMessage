@@ -11,6 +11,8 @@
         <item name="colorAccent">@color/colorAccentDefault</item>
         <item name="colorControlActivated">@android:color/white</item>
 
+        <item name="android:buttonStyle">@style/ButtonThemeDefault</item>
+
         <item name="windowActionModeOverlay">true</item>
         <item name="actionModeStyle">@style/ActionModeDefault</item>
         <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace</item>
