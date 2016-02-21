@@ -1,12 +1,16 @@
 package com.example.kirill.kmessage.Activities.PhotoActivity.Fragments.AllPhotosFragment;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Parcelable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
@@ -38,6 +42,8 @@ import uk.co.senab.photoview.PhotoView;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 public class PagerImageActivity extends AppCompatActivity {
+    private static final int REQUEST_WRITE_STORAGE = 112;
+
     private Toolbar toolbar;
     private ViewPager pager;
 
@@ -46,9 +52,8 @@ public class PagerImageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pager_image);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             this.getWindow().setStatusBarColor(Color.BLACK);
-        }
         this.initComponents();
     }
 
@@ -202,6 +207,25 @@ public class PagerImageActivity extends AppCompatActivity {
     }
 
     private void actionSaveImage() {
+        if(!(ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                == PackageManager.PERMISSION_GRANTED))
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_WRITE_STORAGE);
+        else
+            saveImageSDCard();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(requestCode == REQUEST_WRITE_STORAGE){
+            if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                saveImageSDCard();
+            else
+                Toast.makeText(PagerImageActivity.this, "The app was not allowed permission to write SD-Card", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void saveImageSDCard(){
         if(!Environment.getExternalStorageState()
                 .equals(Environment.MEDIA_MOUNTED)){
             Toast.makeText(PagerImageActivity.this, R.string.toast_message_text_sd_card_not_available, Toast.LENGTH_SHORT).show();

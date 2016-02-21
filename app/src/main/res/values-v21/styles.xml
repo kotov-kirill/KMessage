@@ -17,8 +17,7 @@
         <item name="actionModeStyle">@style/ActionModeDefault</item>
         <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace</item>
 
-        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_default
-        </item>
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_default</item>
 
         <item name="android:alertDialogTheme">@style/Theme_Dialog_Alert</item>
     </style>

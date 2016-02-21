@@ -104,9 +104,9 @@ public class AllPhotosFragment extends AbstractFragment {
                 holder = (ViewHolder) view.getTag();
             }
 
-
             ImageLoader imageLoader = ImageLoader.getInstance();
-            imageLoader.init(ImageLoaderConfiguration.createDefault(this.context));
+            if(!imageLoader.isInited())
+                imageLoader.init(ImageLoaderConfiguration.createDefault(this.context));
             imageLoader.displayImage(IMAGE_URLS[position], holder.imageView, options, new SimpleImageLoadingListener() {
                 @Override
                 public void onLoadingStarted(String imageUri, View view) {
