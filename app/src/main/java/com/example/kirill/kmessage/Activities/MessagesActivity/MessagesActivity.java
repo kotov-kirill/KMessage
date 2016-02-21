@@ -119,12 +119,6 @@ public class MessagesActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        this.choiceModeListener.onActivityResult(requestCode, resultCode, data);
-    }
-
-    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_messages, menu);
         return true;
@@ -134,5 +128,17 @@ public class MessagesActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         MenuReceiver.menuReceiver(this, item);
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        this.choiceModeListener.onActivityResult(requestCode, resultCode, data);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        this.choiceModeListener.onRequestPermissionsResult(requestCode, permissions, grantResults);
     }
 }

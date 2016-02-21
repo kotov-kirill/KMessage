@@ -1,10 +1,14 @@
 package com.example.kirill.kmessage.Activities.MessagesActivity;
 
+import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.SparseBooleanArray;
 import android.view.ActionMode;
 import android.view.Menu;
@@ -13,6 +17,7 @@ import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.kirill.kmessage.Activities.FileDialog;
 import com.example.kirill.kmessage.R;
@@ -29,6 +34,7 @@ import java.io.IOException;
 
 public class MultiChoiceModeListenerImpl implements AbsListView.MultiChoiceModeListener{
     public static final int REQUEST_FILE_DIALOG = 0;
+    public static final int REQUSET_WRITE_STORAGE = 1;
     private Context context;
     private ListView listView;
 
@@ -99,13 +105,34 @@ public class MultiChoiceModeListenerImpl implements AbsListView.MultiChoiceModeL
 
     private ActionMode actionMode;
     private void actionMenuSave(ActionMode mode) {
-        Intent intent = new Intent(this.context, FileDialog.class);
-        if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED))
-            intent.putExtra(FileDialog.START_PATH,
-                    Environment.getExternalStorageDirectory().getAbsolutePath());
-            intent.putExtra(FileDialog.REQUEST_OPEN_MODE, FileDialog.REQUEST_FILE_SAVE);
-        ((MessagesActivity)this.context).startActivityForResult(intent, REQUEST_FILE_DIALOG);
+        if((ContextCompat.checkSelfPermission(this.context, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+            == PackageManager.PERMISSION_GRANTED)) {
+            if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+                Toast.makeText(this.context, R.string.toast_message_text_sd_card_not_available, Toast.LENGTH_SHORT).show();
+                return;
+            }
+            this.startFileDialogActivity();
+        }
+        else
+            ActivityCompat.requestPermissions((MessagesActivity)this.context,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUSET_WRITE_STORAGE);
         this.actionMode = mode;
+    }
+
+    private void startFileDialogActivity() {
+        Intent intent = new Intent(this.context, FileDialog.class);
+        intent.putExtra(FileDialog.START_PATH,
+                Environment.getExternalStorageDirectory().getAbsolutePath());
+        intent.putExtra(FileDialog.REQUEST_OPEN_MODE, FileDialog.REQUEST_FILE_SAVE);
+        ((MessagesActivity) this.context).startActivityForResult(intent, REQUEST_FILE_DIALOG);
+    }
+
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        if(requestCode == REQUSET_WRITE_STORAGE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
+                startFileDialogActivity();
+            else Toast.makeText(this.context, R.string.toast_message_text_permission_write_not_available, Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

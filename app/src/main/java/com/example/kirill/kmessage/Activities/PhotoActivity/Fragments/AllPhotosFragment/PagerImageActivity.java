@@ -221,7 +221,7 @@ public class PagerImageActivity extends AppCompatActivity {
             if(grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
                 saveImageSDCard();
             else
-                Toast.makeText(PagerImageActivity.this, "The app was not allowed permission to write SD-Card", Toast.LENGTH_SHORT).show();
+                Toast.makeText(PagerImageActivity.this, R.string.toast_message_text_permission_write_not_available, Toast.LENGTH_SHORT).show();
         }
     }
 
