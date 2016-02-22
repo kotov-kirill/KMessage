@@ -71,6 +71,42 @@
             android:name=".Activities.FriendsActivity.NewFriendActivity"
             android:label="@string/title_activity_new_friend"
             android:theme="@style/Base.Theme.AppCompat.Light.Dialog.Alert" />
+        <activity
+            android:name=".Activities.SubscribersActivity.SubscribersActivity"
+            android:label="@string/title_activity_subscribers"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.MusicActivity"
+            android:label="@string/title_activity_music"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.GroupsActivity"
+            android:label="@string/title_activity_groups"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.VideoActivity"
+            android:label="@string/title_activity_video"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.FavoritsActivity"
+            android:label="@string/title_activity_favourites"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.DocumentsActivity"
+            android:label="@string/title_activity_documents"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.NotesActivity"
+            android:label="@string/title_activity_notes"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.MoreActivity"
+            android:label="@string/title_activity_more"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Activities.WallActivity"
+            android:label="@string/title_activity_wall"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

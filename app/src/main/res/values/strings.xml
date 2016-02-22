@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">KMessage</string>
     <string name="toast_message_text_sd_card_not_available">SD-Card not available</string>
+    <string name="toast_message_text_permission_write_not_available">The app was not allowed permission to write SD-Card</string>
 
     <!-- Navigation Menu -->
     <string name="nav_menu_profile">Profile</string>
@@ -125,6 +126,15 @@
     <string name="title_activity_new_note">NewNoteActivity</string>
     <string name="title_activity_new_message">NewMessageActivity</string>
     <string name="title_activity_new_friend">NewFriendActivity</string>
-    <string name="toast_message_text_permission_write_not_available">The app was not allowed permission to write SD-Card</string>
     <!-- / -->
+
+    <string name="title_activity_subscribers">Subscribers</string>
+    <string name="title_activity_music">Music</string>
+    <string name="title_activity_groups">Groups</string>
+    <string name="title_activity_video">Video</string>
+    <string name="title_activity_favourites">Favorites</string>
+    <string name="title_activity_documents">Documents</string>
+    <string name="title_activity_notes">Notes</string>
+    <string name="title_activity_more">More</string>
+    <string name="title_activity_wall">Wall</string>
 </resources>

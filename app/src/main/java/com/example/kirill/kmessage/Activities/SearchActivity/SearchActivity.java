@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.design.internal.NavigationMenuView;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -14,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
 import com.example.kirill.kmessage.R;
@@ -23,6 +25,10 @@ public class SearchActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+    private InputMethodManager inputMethodManager;
+    private FloatingActionButton floatingActionButton;
+    private SearchView searchView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +39,8 @@ public class SearchActivity extends AppCompatActivity {
     private void initComponents() {
         this.initToolbar();
         this.initNavigationView();
+        this.inputMethodManager = (InputMethodManager) this.getSystemService(INPUT_METHOD_SERVICE);
+        this.initFloatingActionButton();
     }
 
     private void initToolbar() {
@@ -63,6 +71,17 @@ public class SearchActivity extends AppCompatActivity {
             menuView.setVerticalScrollBarEnabled(false);
     }
 
+    private void initFloatingActionButton() {
+        this.floatingActionButton = (FloatingActionButton) this.findViewById(R.id.fab);
+        this.floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getTypeSearch();
+                inputMethodManager.showSoftInput(searchView, 0);
+            }
+        });
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_search, menu);
@@ -81,14 +100,14 @@ public class SearchActivity extends AppCompatActivity {
                 return false;
             }
         });
-        SearchView searchView = (SearchView) menuItem.getActionView();
+        searchView = (SearchView) menuItem.getActionView();
         searchView.setQueryHint(this.getResources().getString(R.string.action_search));
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             private TextView textView = (TextView) findViewById(R.id.text_query_search);
 
             @Override
             public boolean onQueryTextSubmit(String query) {
-                textView.setText(query);
+                inputMethodManager.hideSoftInputFromWindow(searchView.getWindowToken(), 0);
                 return true;
             }
 
@@ -98,11 +117,11 @@ public class SearchActivity extends AppCompatActivity {
                 return true;
             }
         });
-        this.getTypeSearch(searchView);
+        this.getTypeSearch();
         return true;
     }
 
-    private void getTypeSearch(final SearchView searchView) {
+    private void getTypeSearch() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.alert_dialog_title_type_search);
         final String[] items = this.getResources().getStringArray(R.array.alert_dialog_menu_items);

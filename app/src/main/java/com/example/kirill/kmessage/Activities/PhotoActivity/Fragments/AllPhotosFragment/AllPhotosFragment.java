@@ -30,7 +30,7 @@ import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListene
 
 public class AllPhotosFragment extends AbstractFragment {
     private View view;
-    private GridView listView;
+    private GridView gridView;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -40,9 +40,9 @@ public class AllPhotosFragment extends AbstractFragment {
     }
 
     private void initComponents() {
-        listView = (GridView) this.view.findViewById(R.id.grid);
-        listView.setAdapter(new ImageAdapter(AllPhotosFragment.this.getContext()));
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        gridView = (GridView) this.view.findViewById(R.id.grid);
+        gridView.setAdapter(new ImageAdapter(AllPhotosFragment.this.getContext()));
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(AllPhotosFragment.this.getContext(), PagerImageActivity.class);

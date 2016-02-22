@@ -5,12 +5,17 @@ import android.content.Intent;
 import android.view.MenuItem;
 
 import com.example.kirill.kmessage.Activities.AboutActivity;
+import com.example.kirill.kmessage.Activities.FavoritsActivity;
 import com.example.kirill.kmessage.Activities.FriendsActivity.FriendsActivity;
+import com.example.kirill.kmessage.Activities.GroupsActivity;
 import com.example.kirill.kmessage.Activities.MainActivity;
 import com.example.kirill.kmessage.Activities.MessagesActivity.MessagesActivity;
+import com.example.kirill.kmessage.Activities.MusicActivity;
 import com.example.kirill.kmessage.Activities.PhotoActivity.PhotoActivity;
 import com.example.kirill.kmessage.Activities.ProfileActivity;
 import com.example.kirill.kmessage.Activities.SearchActivity.SearchActivity;
+import com.example.kirill.kmessage.Activities.SubscribersActivity.SubscribersActivity;
+import com.example.kirill.kmessage.Activities.VideoActivity;
 import com.example.kirill.kmessage.R;
 import com.example.kirill.kmessage.Activities.SettingsActivity.SettingsActivity;
 
@@ -35,14 +40,29 @@ public class NavigationMenuReceiver {
             case R.id.menu_navigation_friends:
                 aClass = FriendsActivity.class;
                 break;
+            case R.id.menu_navigation_subscribers:
+                aClass = SubscribersActivity.class;
+                break;
+            case R.id.menu_navigation_groups:
+                aClass = GroupsActivity.class;
+                break;
+            case R.id.menu_navigation_photos:
+                aClass = PhotoActivity.class;
+                break;
+            case R.id.menu_navigation_videos:
+                aClass = VideoActivity.class;
+                break;
+            case R.id.menu_navigation_favourites:
+                aClass = FavoritsActivity.class;
+                break;
+            case R.id.menu_navigation_music:
+                aClass = MusicActivity.class;
+                break;
             case R.id.menu_navigation_settings:
                 aClass = SettingsActivity.class;
                 break;
             case R.id.menu_navigation_about:
                 aClass = AboutActivity.class;
-                break;
-            case R.id.menu_navigation_photos:
-                aClass = PhotoActivity.class;
                 break;
             case R.id.menu_navigation_search:
                 aClass = SearchActivity.class;
