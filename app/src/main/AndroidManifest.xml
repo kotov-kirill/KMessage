@@ -26,39 +26,31 @@
             android:label="@string/title_activity_profile" />
         <activity
             android:name=".Activities.MessagesActivity.MessagesActivity"
-            android:label="@string/title_activity_messages"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_messages" />
         <activity
             android:name=".Activities.FileDialog"
             android:label="@string/title_activity_file_dialog" />
         <activity
             android:name=".Activities.FriendsActivity.FriendsActivity"
-            android:label="@string/title_activity_friends"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_friends" />
         <activity
             android:name=".Activities.SettingsActivity.SettingsActivity"
-            android:label="@string/title_activity_settings"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_settings" />
         <activity
             android:name=".Activities.AboutActivity"
-            android:label="@string/title_activity_about_us"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_about_us" />
         <activity
             android:name=".Activities.SearchActivity.SearchActivity"
-            android:label="@string/title_activity_search"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_search"/>
         <activity
             android:name=".Activities.PhotoActivity.PhotoActivity"
-            android:label="@string/title_activity_photo"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_photo" />
         <activity
             android:name=".Activities.PhotoActivity.Fragments.AllPhotosFragment.PagerImageActivity"
-            android:label="@string/title_activity_page_image"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_page_image" />
         <activity
             android:name=".Activities.SettingsActivity.CommonSettingsActivity"
-            android:label="@string/title_activity_common_settings"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_common_settings" />
         <activity
             android:name=".Activities.NewNoteActivity"
             android:label="@string/title_activity_new_note"
@@ -73,40 +65,31 @@
             android:theme="@style/Base.Theme.AppCompat.Light.Dialog.Alert" />
         <activity
             android:name=".Activities.SubscribersActivity.SubscribersActivity"
-            android:label="@string/title_activity_subscribers"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_subscribers" />
         <activity
             android:name=".Activities.MusicActivity"
-            android:label="@string/title_activity_music"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_music" />
         <activity
             android:name=".Activities.GroupsActivity"
-            android:label="@string/title_activity_groups"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_groups" />
         <activity
             android:name=".Activities.VideoActivity"
-            android:label="@string/title_activity_video"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_video" />
         <activity
             android:name=".Activities.FavoritsActivity"
-            android:label="@string/title_activity_favourites"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_favourites" />
         <activity
             android:name=".Activities.DocumentsActivity"
-            android:label="@string/title_activity_documents"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_documents" />
         <activity
             android:name=".Activities.NotesActivity"
-            android:label="@string/title_activity_notes"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_notes" />
         <activity
             android:name=".Activities.MoreActivity"
-            android:label="@string/title_activity_more"
-            android:theme="@style/AppTheme" />
+            android:label="@string/title_activity_more" />
         <activity
             android:name=".Activities.WallActivity"
-            android:label="@string/title_activity_wall"
-            android:theme="@style/AppTheme"></activity>
+            android:label="@string/title_activity_wall"></activity>
     </application>
 
 </manifest>

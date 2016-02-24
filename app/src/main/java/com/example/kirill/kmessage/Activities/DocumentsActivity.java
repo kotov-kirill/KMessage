@@ -8,12 +8,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.kirill.kmessage.R;
+import com.example.kirill.kmessage.Special.ApplicationThemeSetter;
 
 public class DocumentsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationThemeSetter.themeSetter(this);
         setContentView(R.layout.activity_documents);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.kirill.kmessage.R;
+import com.example.kirill.kmessage.Special.ApplicationThemeSetter;
 import com.example.kirill.kmessage.Special.NavigationMenuReceiver;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener{
@@ -20,11 +21,14 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 
-    private Button buttonCommonSetings;
+    private Button buttonEditInformation;
+    private Button buttonCommonSettings;
+    private Button buttonExit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationThemeSetter.themeSetter(this);
         setContentView(R.layout.activity_settings);
         this.initComponents();
     }
@@ -48,6 +52,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         toggle.syncState();
 
         this.navigationView = (NavigationView) this.findViewById(R.id.navigation_view);
+        ApplicationThemeSetter.styleNavigationHeaderView(navigationView);
         this.navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
@@ -63,8 +68,13 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void initButtons() {
-        this.buttonCommonSetings = (Button) this.findViewById(R.id.button_settings_common);
-        this.buttonCommonSetings.setOnClickListener(this);
+        this.buttonCommonSettings = (Button) this.findViewById(R.id.button_settings_common);
+        this.buttonCommonSettings.setOnClickListener(this);
+
+        this.buttonEditInformation = (Button) this.findViewById(R.id.button_edit_information);
+
+        this.buttonExit = (Button) this.findViewById(R.id.button_exit);
+        ApplicationThemeSetter.styleButtonExit(this, buttonExit);
     }
 
     @Override

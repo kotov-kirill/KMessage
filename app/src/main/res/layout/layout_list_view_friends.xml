@@ -5,13 +5,13 @@
     android:layout_height="match_parent"
     android:background="?android:activatedBackgroundIndicator"
     android:padding="@dimen/padding_message_list_view_main">
-    
+
     <View
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/avatar_id" />
 
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -26,7 +26,17 @@
             android:layout_width="5dp"
             android:layout_height="5dp"
             android:id="@+id/is_on_line"
-            android:layout_margin="15dp" />
-    </LinearLayout>
+            android:layout_margin="15dp"
+            android:background="?attr/colorPrimary" />
+    </LinearLayout>-->
+
+    <android.support.v7.widget.AppCompatCheckedTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/FIO"
+        android:paddingLeft="@dimen/padding_message_list_view_ll"
+        android:layout_marginTop="9dp"
+        android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+        android:textAppearance="@android:style/TextAppearance.Holo.Medium"/>
 
 </LinearLayout>

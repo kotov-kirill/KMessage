@@ -69,7 +69,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Edit Information"
-                    style="@style/ButtonSettings" />
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:gravity="start"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/button_edit_information"
+                    android:textColor="?attr/colorPrimary"/>
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -86,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/text_view_settings"
                     style="@style/Base.TextAppearance.AppCompat.Small"
-                    android:textColor="@color/colorPrimaryDefault"
+                    android:textColor="?attr/colorPrimary"
                     android:paddingLeft="20dp"
                     android:textStyle="bold" />
                 <Button
@@ -146,7 +153,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/text_view_about"
                     style="@style/Base.TextAppearance.AppCompat.Small"
-                    android:textColor="@color/colorPrimaryDefault"
+                    android:textColor="?attr/colorPrimary"
                     android:paddingLeft="20dp"
                     android:textStyle="bold" />
                 <Button
@@ -175,7 +182,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/button_text_exit"
-                style="@style/ButtonProfileThemeExit" />
+                android:id="@+id/button_exit"/>
         </android.support.v7.widget.CardView>
     </LinearLayout>
 

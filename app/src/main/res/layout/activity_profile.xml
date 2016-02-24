@@ -27,7 +27,7 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="182dp"
-                    android:background="@drawable/navigation_header">
+                    android:id="@+id/profile_header_layout">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         xmlns:app="http://schemas.android.com/apk/res-auto"

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.Red" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryRed</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkRed</item>
+        <item name="colorAccent">@color/colorAccentRed</item>
+
+        <item name="buttonStyle">@style/ButtonThemeRed</item>
+        <item name="actionModeStyle">@style/ActionModeRed</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace_red</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_red</item>
+        <item name="android:alertDialogTheme">@style/alertDialogStyleRed</item>
+    </style>
+
+    <!-- ActionMode Styles -->
+    <style name="ActionModeRed" parent="Base.Widget.AppCompat.ActionMode">
+        <!--<item name="background">@android:color/white</item>-->
+        <item name="titleTextStyle">@style/actionModeTitleRed</item>
+    </style>
+
+    <style name="actionModeTitleRed" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <!--<item name="android:textColor">?android:attr/textColorSecondary</item>-->
+        <item name="android:textColor">@color/colorPrimaryRed</item>
+    </style>
+    <!-- / -->
+
+    <!-- Red Buttons Styles -->
+    <style name="ButtonThemeRed" parent="ButtonTheme">
+        <item name="android:background">@drawable/button_theme_red_background</item>
+    </style>
+
+    <!-- / -->
+
+    <!-- AlertDialog Styles -->
+    <style name="alertDialogStyleRed" parent="alertDialogStyle">
+        <item name="android:windowTitleStyle">@style/DialogWindowTitleRed</item>
+        <item name="android:borderlessButtonStyle">@style/ButtonThemeRed</item>
+    </style>
+
+    <style name="DialogWindowTitleRed" parent="DialogWindowTitle">
+        <item name="android:textColor">@color/colorPrimaryRed</item>
+    </style>
+    <!-- / -->
+
+    <!-- ProgressBarStyle-->
+    <style name="ProgressBarStyleRed" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_bar</item>
+    </style>
+    <!-- / -->
+</resources>

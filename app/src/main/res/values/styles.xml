@@ -1,21 +1,8 @@
 <resources>
 
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/colorPrimaryDefault</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDarkDefault</item>
-        <item name="colorAccent">@color/colorAccentDefault</item>
-        <item name="colorControlActivated">@android:color/white</item>
-
-        <item name="buttonStyle">@style/ButtonThemeDefault</item>
-
-        <item name="actionModeStyle">@style/ActionModeDefault</item>
+        <!--<item name="colorControlActivated">@android:color/white</item>-->
         <item name="windowActionModeOverlay">true</item>
-        <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace</item>
-
-        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_default
-        </item>
-
-        <item name="android:alertDialogTheme">@style/Theme_Dialog_Alert</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -23,9 +10,31 @@
     <style name="AppTheme.AppBarOverlay.Light" parent="ThemeOverlay.AppCompat.ActionBar">
         <item name="titleTextColor">@android:color/white</item>
         <item name="colorControlNormal">@android:color/white</item>
-        <item name="colorControlActivated">@color/colorPrimaryDarkDefault</item>
+        <item name="colorControlActivated">?attr/colorPrimary</item>
     </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Default Buttons Styles -->
+    <style name="ButtonTheme" parent="android:Widget.Button">
+        <item name="android:minHeight">37dip</item>
+        <item name="android:minWidth">64dip</item>
+        <item name="android:paddingLeft">10dp</item>
+    </style>
+    <!-- / -->
+
+    <!-- AlertDialog Styles -->
+    <style name="alertDialogStyle" parent="@android:style/Theme.Holo.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowTitleStyle">@style/DialogWindowTitlePurple</item>
+        <item name="android:windowMinWidthMajor">@android:dimen/dialog_min_width_major</item>
+        <item name="android:windowMinWidthMinor">@android:dimen/dialog_min_width_minor</item>
+        <item name="android:borderlessButtonStyle">@style/ButtonThemePurple</item>
+    </style>
+
+    <style name="DialogWindowTitle">
+        <item name="android:textAppearance">@android:style/TextAppearance.Holo.DialogWindowTitle</item>
+    </style>
+    <!-- / -->
 
 </resources>

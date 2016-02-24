@@ -42,7 +42,7 @@ public class OnLineFriendsFragment extends AbstractFragment{
                 this.add(new Friend(getColor(), "Александр", true));
                 this.add(new Friend(getColor(), "Петр", true));
                 this.add(new Friend(getColor(), "Георгий", true));
-                this.add(new Friend(getColor(), "Наталья", false));
+                this.add(new Friend(getColor(), "Наталья", true));
                 this.add(new Friend(getColor(), "Евгений", true));
             }
         };

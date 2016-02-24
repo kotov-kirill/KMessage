@@ -38,7 +38,7 @@
                     android:text="@string/button_text_online"
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
-                    android:drawableLeft="@drawable/ic_cisco_webex" />
+                    android:id="@+id/button_on_line" />
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
@@ -165,7 +165,6 @@
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
                     android:drawableLeft="@drawable/ic_bookmark"
-                    style="@style/ButtonThemeDefault"
                     android:paddingTop="8dp"
                     android:paddingBottom="8dp"/>
 
@@ -232,7 +231,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
+            android:layout_marginBottom="2dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -243,7 +242,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/button_text_exit"
-                    style="@style/ButtonProfileThemeExit" />
+                    android:id="@+id/button_exit_profile"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"/>
             </LinearLayout>
 
         </android.support.v7.widget.CardView>

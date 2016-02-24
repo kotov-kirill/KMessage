@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.Purple" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryPurple</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkPurple</item>
+        <item name="colorAccent">@color/colorAccentPurple</item>
+
+        <item name="buttonStyle">@style/ButtonThemePurple</item>
+        <item name="actionModeStyle">@style/ActionModePurple</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace_purple</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_purple</item>
+        <item name="android:alertDialogTheme">@style/alertDialogStylePurple</item>
+    </style>
+
+    <!-- ActionMode Styles -->
+    <style name="ActionModePurple" parent="Base.Widget.AppCompat.ActionMode">
+        <!--<item name="background">@android:color/white</item>-->
+        <item name="titleTextStyle">@style/actionModeTitlePurple</item>
+    </style>
+
+    <style name="actionModeTitlePurple" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <!--<item name="android:textColor">?android:attr/textColorSecondary</item>-->
+        <item name="android:textColor">@color/colorPrimaryPurple</item>
+    </style>
+    <!-- / -->
+
+    <!-- Purple Buttons Styles -->
+    <style name="ButtonThemePurple" parent="ButtonTheme">
+        <item name="android:background">@drawable/button_theme_purple_background</item>
+    </style>
+
+    <!-- / -->
+
+    <!-- AlertDialog Styles -->
+    <style name="alertDialogStylePurple" parent="alertDialogStyle">
+        <item name="android:windowTitleStyle">@style/DialogWindowTitlePurple</item>
+        <item name="android:borderlessButtonStyle">@style/ButtonThemePurple</item>
+    </style>
+
+    <style name="DialogWindowTitlePurple" parent="DialogWindowTitle">
+        <item name="android:textColor">@color/colorPrimaryPurple</item>
+    </style>
+    <!-- / -->
+
+    <!-- ProgressBarStyle-->
+    <style name="ProgressBarStylePurple" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_bar</item>
+    </style>
+    <!-- / -->
+</resources>

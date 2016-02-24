@@ -19,6 +19,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 
 import com.example.kirill.kmessage.R;
+import com.example.kirill.kmessage.Special.ApplicationThemeSetter;
 import com.example.kirill.kmessage.Special.NavigationMenuReceiver;
 
 public class SearchActivity extends AppCompatActivity {
@@ -32,6 +33,7 @@ public class SearchActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationThemeSetter.themeSetter(this);
         setContentView(R.layout.activity_search);
         this.initComponents();
     }
@@ -124,7 +126,7 @@ public class SearchActivity extends AppCompatActivity {
     private void getTypeSearch() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.alert_dialog_title_type_search);
-        final String[] items = this.getResources().getStringArray(R.array.alert_dialog_menu_items);
+        final String[] items = this.getResources().getStringArray(R.array.alert_dialog_search_menu_items);
         DialogListItem[] dialogListItems = new DialogListItem[]{
                 new DialogListItem(R.drawable.ic_account_star_variant, items[0]),
                 new DialogListItem(R.drawable.ic_music_box, items[1]),
@@ -139,12 +141,7 @@ public class SearchActivity extends AppCompatActivity {
                 searchView.setQueryHint(items[which]);
             }
         });
-        AlertDialog alertDialog = builder.show();
-
-        int titleDividerId = this.getResources().getIdentifier("titleDivider", "id", "android");
-        View titleDivider = alertDialog.findViewById(titleDividerId);
-        if (titleDivider != null)
-            titleDivider.setBackgroundResource(R.color.colorPrimaryDefault);
+        ApplicationThemeSetter.styleAlertDialogDivider(this, builder.show());
     }
 
 }

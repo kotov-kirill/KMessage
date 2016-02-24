@@ -13,7 +13,6 @@ import android.util.SparseBooleanArray;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -21,6 +20,7 @@ import android.widget.Toast;
 
 import com.example.kirill.kmessage.Activities.FileDialog;
 import com.example.kirill.kmessage.R;
+import com.example.kirill.kmessage.Special.ApplicationThemeSetter;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -34,7 +34,7 @@ import java.io.IOException;
 
 public class MultiChoiceModeListenerImpl implements AbsListView.MultiChoiceModeListener{
     public static final int REQUEST_FILE_DIALOG = 0;
-    public static final int REQUSET_WRITE_STORAGE = 1;
+    public static final int REQUEST_WRITE_STORAGE = 1;
     private Context context;
     private ListView listView;
 
@@ -51,6 +51,7 @@ public class MultiChoiceModeListenerImpl implements AbsListView.MultiChoiceModeL
     @Override
     public boolean onCreateActionMode(ActionMode mode, Menu menu) {
         mode.getMenuInflater().inflate(R.menu.menu_list_view_message, menu);
+        ApplicationThemeSetter.styleActionModeMenuItems(menu);
         return true;
     }
 
@@ -83,24 +84,18 @@ public class MultiChoiceModeListenerImpl implements AbsListView.MultiChoiceModeL
             public void onClick(DialogInterface dialog, int which) {
                 SparseBooleanArray checkedItemPositions = listView.getCheckedItemPositions();
                 int deletedCount = 0;
-                for(int i = 0; i < checkedItemPositions.size(); i++)
-                    if(checkedItemPositions.valueAt(i)){
+                for (int i = 0; i < checkedItemPositions.size(); i++)
+                    if (checkedItemPositions.valueAt(i)) {
                         int position = checkedItemPositions.keyAt(i);
                         Object itemDeleted = listView.getAdapter().getItem(position - deletedCount);
-                        ((ArrayAdapter)listView.getAdapter()).remove(itemDeleted);
+                        ((ArrayAdapter) listView.getAdapter()).remove(itemDeleted);
                         deletedCount++;
                     }
                 mode.finish();
             }
         });
         builder.setNegativeButton(R.string.negative_button, null);
-        AlertDialog dialog = builder.show();
-
-        // Set title divider color
-        int titleDividerId = this.context.getResources().getIdentifier("titleDivider", "id", "android");
-        View titleDivider = dialog.findViewById(titleDividerId);
-        if (titleDivider != null)
-            titleDivider.setBackgroundResource(R.color.colorPrimaryDefault);
+        ApplicationThemeSetter.styleAlertDialogDivider((MessagesActivity) this.context, builder.show());
     }
 
     private ActionMode actionMode;
@@ -115,7 +110,7 @@ public class MultiChoiceModeListenerImpl implements AbsListView.MultiChoiceModeL
         }
         else
             ActivityCompat.requestPermissions((MessagesActivity)this.context,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUSET_WRITE_STORAGE);
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, REQUEST_WRITE_STORAGE);
         this.actionMode = mode;
     }
 
@@ -128,7 +123,7 @@ public class MultiChoiceModeListenerImpl implements AbsListView.MultiChoiceModeL
     }
 
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        if(requestCode == REQUSET_WRITE_STORAGE) {
+        if(requestCode == REQUEST_WRITE_STORAGE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
                 startFileDialogActivity();
             else Toast.makeText(this.context, R.string.toast_message_text_permission_write_not_available, Toast.LENGTH_SHORT).show();

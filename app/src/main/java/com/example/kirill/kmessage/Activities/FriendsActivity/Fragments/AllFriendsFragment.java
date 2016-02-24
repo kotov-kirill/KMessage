@@ -43,8 +43,10 @@ public class AllFriendsFragment extends AbstractFragment{
                 this.add(new Friend(getColor(), "Александр", true));
                 this.add(new Friend(getColor(), "Сергей", false));
                 this.add(new Friend(getColor(), "Петр", true));
+                this.add(new Friend(getColor(), "Оксана", false));
+                this.add(new Friend(getColor(), "Ксения", false));
                 this.add(new Friend(getColor(), "Георгий", true));
-                this.add(new Friend(getColor(), "Наталья", false));
+                this.add(new Friend(getColor(), "Наталья", true));
                 this.add(new Friend(getColor(), "Павел", false));
                 this.add(new Friend(getColor(), "Евгений", true));
             }

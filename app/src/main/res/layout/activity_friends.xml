@@ -25,11 +25,10 @@
             <android.support.design.widget.TabLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/tab_layout"
                 app:tabIndicatorColor="@android:color/white"
                 app:tabIndicatorHeight="3dp"
-                app:tabSelectedTextColor="@android:color/white"
-                app:tabTextColor="@color/colorTabText"
-                android:id="@+id/tab_layout" />
+                app:tabSelectedTextColor="@android:color/white"/>
 
         </android.support.design.widget.AppBarLayout>
 

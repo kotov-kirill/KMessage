@@ -11,8 +11,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 
 import com.example.kirill.kmessage.R;
+import com.example.kirill.kmessage.Special.ApplicationThemeSetter;
 import com.example.kirill.kmessage.Special.MenuReceiver;
 import com.example.kirill.kmessage.Special.NavigationMenuReceiver;
 
@@ -21,9 +24,14 @@ public class ProfileActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private NavigationView navigationView;
 
+    private RelativeLayout relativeLayout;
+    private Button buttonOnLine;
+    private Button buttonExitProfile;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationThemeSetter.themeSetter(this);
         setContentView(R.layout.activity_profile);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
@@ -34,11 +42,15 @@ public class ProfileActivity extends AppCompatActivity {
     private void initComponents() {
         this.initToolbar();
         this.initNavigationView();
+        this.initButtons();
     }
 
     private void initToolbar() {
         this.toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        this.relativeLayout = (RelativeLayout) this.findViewById(R.id.profile_header_layout);
+        ApplicationThemeSetter.setBackgroundLayoutHeader(this.relativeLayout);
     }
 
     private void initNavigationView() {
@@ -49,6 +61,7 @@ public class ProfileActivity extends AppCompatActivity {
         toggle.syncState();
 
         this.navigationView = (NavigationView) this.findViewById(R.id.navigation_view);
+        ApplicationThemeSetter.styleNavigationHeaderView(navigationView);
         this.navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
@@ -62,6 +75,14 @@ public class ProfileActivity extends AppCompatActivity {
         NavigationMenuView menuView = (NavigationMenuView) this.navigationView.getChildAt(0);
         if(menuView != null)
             menuView.setVerticalScrollBarEnabled(false);
+    }
+
+    private void initButtons() {
+        this.buttonExitProfile = (Button) this.findViewById(R.id.button_exit_profile);
+        ApplicationThemeSetter.styleButtonExit(this, buttonExitProfile);
+
+        this.buttonOnLine = (Button) this.findViewById(R.id.button_on_line);
+        ApplicationThemeSetter.setBackgroundViewOnLine(this, buttonOnLine);
     }
 
     @Override

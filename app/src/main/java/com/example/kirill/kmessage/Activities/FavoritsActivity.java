@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.kirill.kmessage.R;
+import com.example.kirill.kmessage.Special.ApplicationThemeSetter;
 import com.example.kirill.kmessage.Special.MenuReceiver;
 import com.example.kirill.kmessage.Special.NavigationMenuReceiver;
 
@@ -26,6 +27,7 @@ public class FavoritsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ApplicationThemeSetter.themeSetter(this);
         setContentView(R.layout.activity_main);
         this.initComponents();
     }
@@ -48,6 +50,7 @@ public class FavoritsActivity extends AppCompatActivity {
         toggle.syncState();
 
         this.navigationView = (NavigationView) this.findViewById(R.id.navigation_view);
+        ApplicationThemeSetter.styleNavigationHeaderView(navigationView);
         this.navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {

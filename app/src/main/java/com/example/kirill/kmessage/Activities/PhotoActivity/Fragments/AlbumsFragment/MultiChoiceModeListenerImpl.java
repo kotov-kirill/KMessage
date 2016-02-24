@@ -7,12 +7,13 @@ import android.util.SparseBooleanArray;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.AbsListView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.kirill.kmessage.Activities.PhotoActivity.PhotoActivity;
 import com.example.kirill.kmessage.R;
+import com.example.kirill.kmessage.Special.ApplicationThemeSetter;
 
 /**
  * Created on 10.02.2016.
@@ -35,6 +36,7 @@ public class MultiChoiceModeListenerImpl implements AbsListView.MultiChoiceModeL
     @Override
     public boolean onCreateActionMode(ActionMode mode, Menu menu) {
         mode.getMenuInflater().inflate(R.menu.menu_list_view_albums, menu);
+        ApplicationThemeSetter.styleActionModeMenuItems(menu);
         return true;
     }
 
@@ -74,11 +76,7 @@ public class MultiChoiceModeListenerImpl implements AbsListView.MultiChoiceModeL
         });
         builder.setNegativeButton(R.string.negative_button, null);
 
-        AlertDialog dialog = builder.show();
-        int titleId = this.context.getResources().getIdentifier("titleDivider", "id", "android");
-        View divider = dialog.findViewById(titleId);
-        if(divider != null)
-            divider.setBackgroundResource(R.color.colorPrimaryDefault);
+        ApplicationThemeSetter.styleAlertDialogDivider((PhotoActivity) this.context, builder.show());
     }
 
     @Override
