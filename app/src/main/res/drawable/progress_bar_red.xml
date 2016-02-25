@@ -34,12 +34,11 @@
             <shape>
                 <corners android:radius="5dip" />
                 <gradient
-                    android:startColor="@color/colorActivatedListPurple"
-                    android:centerColor="@color/colorPrimaryPurple"
+                    android:startColor="@color/colorActivatedListRed"
+                    android:centerColor="@color/colorPrimaryRed"
                     android:centerY="0.75"
-                    android:endColor="@color/colorPrimaryDarkPurple"
-                    android:angle="270"
-                    />
+                    android:endColor="@color/colorPrimaryDarkRed"
+                    android:angle="270" />
             </shape>
         </clip>
     </item>

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="mainBackground">#e2e2e2</color>
+    <color name="colorTabText">#E0E0E0</color>
+
+    <!-- colors Purple-->
     <color name="colorPrimaryPurple">#7B1FA2</color>
     <color name="colorPrimaryDarkPurple">#6A1B9A</color>
     <color name="colorAccentPurple">#7B1FA2</color>
-    <color name="mainBackground">#e2e2e2</color>
-    <color name="colorTabText">#E0E0E0</color>
 
     <color name="colorButtonsPressedPurple">#D1C4E9</color>
     <color name="colorButtonExitPurple">#B39DDB</color>
@@ -12,8 +14,9 @@
 
     <color name="colorActivatedListPressedPurple">#D1C4E9</color>
     <color name="colorActivatedListPurple">#B39DDB</color>
+    <!-- /-->
 
-
+    <!-- colors Red-->
     <color name="colorPrimaryRed">#D32F2F</color>
     <color name="colorPrimaryDarkRed">#C62828</color>
     <color name="colorAccentRed">#D32F2F</color>
@@ -25,9 +28,22 @@
 
     <color name="colorActivatedListPressedRed">#FFCDD2</color>
     <color name="colorActivatedListRed">#EF9A9A</color>
+    <!-- /-->
+
+    <!-- colors DeepPurple-->
+    <color name="colorPrimaryDeepPurple">#512DA8</color>
+    <color name="colorPrimaryDarkDeepPurple">#4527A0</color>
+    <color name="colorAccentDeepPurple">#512DA8</color>
+
+    <color name="colorButtonsPressedDeepPurple">#C5CAE9</color>
+    <color name="colorButtonExitDeepPurple">#9FA8DA</color>
+    <color name="colorButtonExitPressedDeepPurple">#7986CB</color>
+
+    <color name="colorActivatedListPressedDeepPurple">#C5CAE9</color>
+    <color name="colorActivatedListDeepPurple">#9FA8DA</color>
+    <!-- /-->
 
 
-    <color name="colorPrimaryDeepPurple">#4527A0</color>
     <color name="colorPrimaryIndigo">#283593</color>
     <color name="colorPrimaryGreen">#2E7D32</color>
     <color name="colorPrimaryOrange">#EF6C00</color>

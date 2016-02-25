@@ -43,6 +43,7 @@ public class ApplicationThemeSetter {
                 themeId = R.style.AppTheme_Red;
                 break;
             case APP_THEME_DEEP_PURPLE:
+                themeId = R.style.AppTheme_DeepPurple;
                 break;
             case APP_THEME_INDIGO:
                 break;
@@ -65,6 +66,7 @@ public class ApplicationThemeSetter {
                 resId = R.drawable.navigation_header_red;
                 break;
             case APP_THEME_DEEP_PURPLE:
+                resId = R.drawable.navigation_header_deep_purple;
                 break;
             case APP_THEME_INDIGO:
                 break;
@@ -95,6 +97,8 @@ public class ApplicationThemeSetter {
                 resIdDelete = R.drawable.ic_delete_red;
                 break;
             case APP_THEME_DEEP_PURPLE:
+                resIdSave = R.drawable.ic_content_save_deep_purple;
+                resIdDelete = R.drawable.ic_delete_deep_purple;
                 break;
             case APP_THEME_INDIGO:
                 break;
@@ -122,6 +126,7 @@ public class ApplicationThemeSetter {
                 drawable = activity.getResources().getDrawable(R.drawable.button_exit_profile_background_red);
                 break;
             case APP_THEME_DEEP_PURPLE:
+                drawable = activity.getResources().getDrawable(R.drawable.button_exit_profile_background_deep_purple);
                 break;
             case APP_THEME_INDIGO:
                 break;
@@ -146,6 +151,7 @@ public class ApplicationThemeSetter {
                 resId = R.color.colorPrimaryRed;
                 break;
             case APP_THEME_DEEP_PURPLE:
+                resId = R.color.colorPrimaryDeepPurple;
                 break;
             case APP_THEME_INDIGO:
                 break;
@@ -171,6 +177,7 @@ public class ApplicationThemeSetter {
                 resId = R.drawable.navigation_header_red;
                 break;
             case APP_THEME_DEEP_PURPLE:
+                resId = R.drawable.navigation_header_deep_purple;
                 break;
             case APP_THEME_INDIGO:
                 break;
@@ -193,6 +200,7 @@ public class ApplicationThemeSetter {
                 drawable = activity.getResources().getDrawable(R.drawable.ic_cisco_webex_red);
                 break;
             case APP_THEME_DEEP_PURPLE:
+                drawable = activity.getResources().getDrawable(R.drawable.ic_cisco_webex_deep_purple);
                 break;
             case APP_THEME_INDIGO:
                 break;
