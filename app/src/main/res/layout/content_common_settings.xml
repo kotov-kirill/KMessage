@@ -42,8 +42,7 @@
                     android:gravity="left|center_vertical"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:id="@+id/button_application_full_screen"
-                    android:onClick="buttonChangeApplicationTheme"/>
+                    android:id="@+id/button_application_full_screen" />
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -51,8 +50,7 @@
                     android:gravity="left|center_vertical"
                     android:paddingTop="10dp"
                     android:paddingBottom="10dp"
-                    android:id="@+id/button_application_language"
-                    android:onClick="buttonChangeApplicationTheme"/>
+                    android:id="@+id/button_application_language" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
