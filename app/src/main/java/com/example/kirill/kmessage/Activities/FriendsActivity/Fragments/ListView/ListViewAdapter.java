@@ -48,6 +48,8 @@ public class ListViewAdapter extends ArrayAdapter<Friend>{
         if(this.getItem(position).isOnLine())
             //viewHolder.isOnLine.setBackgroundResource(R.color.mainBackground);
             viewHolder.FIO.setChecked(true);
+        else
+            viewHolder.FIO.setChecked(false);
         return row;
     }
 }

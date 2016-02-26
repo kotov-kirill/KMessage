@@ -20,7 +20,6 @@
     <color name="colorPrimaryRed">#D32F2F</color>
     <color name="colorPrimaryDarkRed">#C62828</color>
     <color name="colorAccentRed">#D32F2F</color>
-    <color name="colorTabTextRed">#EF9A9A</color>
 
     <color name="colorButtonsPressedRed">#FFCDD2</color>
     <color name="colorButtonExitRed">#EF9A9A</color>
@@ -43,8 +42,19 @@
     <color name="colorActivatedListDeepPurple">#9FA8DA</color>
     <!-- /-->
 
+    <!-- colors Indigo-->
+    <color name="colorPrimaryIndigo">#303F9F</color>
+    <color name="colorPrimaryDarkIndigo">#283593</color>
+    <color name="colorAccentIndigo">#303F9F</color>
 
-    <color name="colorPrimaryIndigo">#283593</color>
+    <color name="colorButtonsPressedIndigo">#C5CAE9</color>
+    <color name="colorButtonExitIndigo">#9FA8DA</color>
+    <color name="colorButtonsExitPressedIndigo">#7986CB</color>
+
+    <color name="colorActivatedListPressedIndigo">#C5CAE9</color>
+    <color name="colorActivatedListIndigo">#9FA8DA</color>
+    <!-- / -->
+
     <color name="colorPrimaryGreen">#2E7D32</color>
     <color name="colorPrimaryOrange">#EF6C00</color>
     <color name="colorPrimaryDeepOrange">#D84315</color>

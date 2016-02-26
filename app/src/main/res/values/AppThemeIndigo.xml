@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.Indigo" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryIndigo</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkIndigo</item>
+        <item name="colorAccent">@color/colorAccentIndigo</item>
+
+        <item name="buttonStyle">@style/ButtonThemeIndigo</item>
+        <item name="actionModeStyle">@style/ActionModeIndigo</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace_deep_purple</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_deep_purple</item>
+        <item name="android:alertDialogTheme">@style/alertDialogStyleIndigo</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarStyleIndigo</item>
+    </style>
+
+    <!-- ActionMode Styles -->
+    <style name="ActionModeIndigo" parent="Base.Widget.AppCompat.ActionMode">
+        <!--<item name="background">@android:color/white</item>-->
+        <item name="titleTextStyle">@style/actionModeTitleIndigo</item>
+    </style>
+
+    <style name="actionModeTitleIndigo" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <!--<item name="android:textColor">?android:attr/textColorSecondary</item>-->
+        <item name="android:textColor">@color/colorPrimaryIndigo</item>
+    </style>
+    <!-- / -->
+
+    <!-- Indigo Buttons Styles -->
+    <style name="ButtonThemeIndigo" parent="ButtonTheme">
+        <item name="android:background">@drawable/button_theme_deep_purple_background</item>
+    </style>
+
+    <!-- / -->
+
+    <!-- AlertDialog Styles -->
+    <style name="alertDialogStyleIndigo" parent="alertDialogStyle">
+        <item name="android:windowTitleStyle">@style/DialogWindowTitleIndigo</item>
+        <item name="android:borderlessButtonStyle">@style/ButtonThemeIndigo</item>
+    </style>
+
+    <style name="DialogWindowTitleIndigo" parent="DialogWindowTitle">
+        <item name="android:textColor">@color/colorPrimaryIndigo</item>
+    </style>
+    <!-- / -->
+
+    <!-- ProgressBarStyle-->
+    <style name="ProgressBarStyleIndigo" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_bar_deep_purple</item>
+    </style>
+    <!-- / -->
+</resources>
