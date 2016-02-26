@@ -3,6 +3,7 @@ package com.example.kirill.kmessage.Activities.SettingsActivity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -15,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.kirill.kmessage.Activities.MainActivity;
 import com.example.kirill.kmessage.R;
 import com.example.kirill.kmessage.Special.ApplicationThemeSetter;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -83,7 +85,10 @@ public class CommonSettingsActivity extends AppCompatActivity{
                                 = getSharedPreferences(APP_COMMON_SETTINGS_PREFERENCES, MODE_PRIVATE).edit();
                         edit.putInt(APP_THEME_PREFERENCE, which);
                         edit.apply();
-                        Toast.makeText(CommonSettingsActivity.this, R.string.alert_dialog_toast_restart_application, Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(CommonSettingsActivity.this, R.string.alert_dialog_toast_restart_application, Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(CommonSettingsActivity.this, SettingsActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
                     }
                 });
         AlertDialog dialog = builder.show();
