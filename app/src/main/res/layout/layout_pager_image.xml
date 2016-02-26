@@ -17,6 +17,6 @@
 		android:layout_height="wrap_content"
 		android:layout_gravity="center"
 		android:visibility="gone"
-		style="?android:attr/progressBarStyleInverse"/>
+		android:indeterminateTint="@android:color/white"/>
 
 </FrameLayout>

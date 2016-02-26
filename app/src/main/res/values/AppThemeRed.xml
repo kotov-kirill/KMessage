@@ -10,7 +10,7 @@
         <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace_red</item>
         <item name="android:activatedBackgroundIndicator">@drawable/activated_background_red</item>
         <item name="android:alertDialogTheme">@style/alertDialogStyleRed</item>
-        <item name="android:progressBarStyle">@style/ProgressBarStyleRed</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarStyleRed</item>
     </style>
 
     <!-- ActionMode Styles -->

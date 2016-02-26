@@ -10,7 +10,7 @@
         <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace_deep_purple</item>
         <item name="android:activatedBackgroundIndicator">@drawable/activated_background_deep_purple</item>
         <item name="android:alertDialogTheme">@style/alertDialogStyleDeepPurple</item>
-        <item name="android:progressBarStyle">@style/ProgressBarStyleDeepPurple</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarStyleDeepPurple</item>
     </style>
 
     <!-- ActionMode Styles -->
