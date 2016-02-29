@@ -49,10 +49,13 @@ public class ApplicationThemeSetter {
                 themeId = R.style.AppTheme_Indigo;
                 break;
             case APP_THEME_GREEN:
+                themeId = R.style.AppTheme_Green;
                 break;
             case APP_THEME_ORANGE:
+                themeId = R.style.AppTheme_Orange;
                 break;
             case APP_THEME_DEEP_ORANGE:
+                themeId = R.style.AppTheme_DeepOrange;
                 break;
         }
         activity.setTheme(themeId);
@@ -73,10 +76,13 @@ public class ApplicationThemeSetter {
                 resId = R.drawable.navigation_header_indigo;
                 break;
             case APP_THEME_GREEN:
+                resId = R.drawable.navigation_header_green;
                 break;
             case APP_THEME_ORANGE:
+                resId = R.drawable.navigation_header_orange;
                 break;
             case APP_THEME_DEEP_ORANGE:
+                resId = R.drawable.navigation_header_deep_orange;
                 break;
         }
         View headerView = navigationView.getHeaderView(0);
@@ -107,10 +113,16 @@ public class ApplicationThemeSetter {
                 resIdDelete = R.drawable.ic_delete_deep_purple;
                 break;
             case APP_THEME_GREEN:
+                resIdSave = R.drawable.ic_content_save_green;
+                resIdDelete = R.drawable.ic_delete_green;
                 break;
             case APP_THEME_ORANGE:
+                resIdSave = R.drawable.ic_content_save_orange;
+                resIdDelete = R.drawable.ic_delete_orange;
                 break;
             case APP_THEME_DEEP_ORANGE:
+                resIdSave = R.drawable.ic_content_save_deep_orange;
+                resIdDelete = R.drawable.ic_delete_deep_orange;
                 break;
         }
         MenuItem itemSave = menu.findItem(R.id.action_save);
@@ -136,10 +148,13 @@ public class ApplicationThemeSetter {
                 drawable = activity.getResources().getDrawable(R.drawable.button_exit_profile_background_deep_purple);
                 break;
             case APP_THEME_GREEN:
+                drawable = activity.getResources().getDrawable(R.drawable.button_exit_profile_background_green);
                 break;
             case APP_THEME_ORANGE:
+                drawable = activity.getResources().getDrawable(R.drawable.button_exit_profile_background_orange);
                 break;
             case APP_THEME_DEEP_ORANGE:
+                drawable = activity.getResources().getDrawable(R.drawable.button_exit_profile_background_deep_orange);
                 break;
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN)
@@ -162,10 +177,13 @@ public class ApplicationThemeSetter {
                 resId = R.color.colorPrimaryIndigo;
                 break;
             case APP_THEME_GREEN:
+                resId = R.color.colorPrimaryGreen;
                 break;
             case APP_THEME_ORANGE:
+                resId = R.color.colorPrimaryOrange;
                 break;
             case APP_THEME_DEEP_ORANGE:
+                resId = R.color.colorPrimaryDeepOrange;
                 break;
         }
         int titleDividerId = activity.getResources().getIdentifier("titleDivider", "id", "android");
@@ -189,10 +207,13 @@ public class ApplicationThemeSetter {
                 resId = R.drawable.navigation_header_indigo;
                 break;
             case APP_THEME_GREEN:
+                resId = R.drawable.navigation_header_green;
                 break;
             case APP_THEME_ORANGE:
+                resId = R.drawable.navigation_header_orange;
                 break;
             case APP_THEME_DEEP_ORANGE:
+                resId = R.drawable.navigation_header_deep_orange;
                 break;
         }
         relativeLayout.setBackgroundResource(resId);
@@ -213,10 +234,13 @@ public class ApplicationThemeSetter {
                 drawable = activity.getResources().getDrawable(R.drawable.ic_cisco_webex_deep_purple);
                 break;
             case APP_THEME_GREEN:
+                drawable = activity.getResources().getDrawable(R.drawable.ic_cisco_webex_green);
                 break;
             case APP_THEME_ORANGE:
+                drawable = activity.getResources().getDrawable(R.drawable.ic_cisco_webex_orange);
                 break;
             case APP_THEME_DEEP_ORANGE:
+                drawable = activity.getResources().getDrawable(R.drawable.ic_cisco_webex_deep_orange);
                 break;
         }
         button.setCompoundDrawablesWithIntrinsicBounds(drawable, null, null, null);

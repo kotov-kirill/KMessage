@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.Green" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryGreen</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkGreen</item>
+        <item name="colorAccent">@color/colorAccentGreen</item>
+
+        <item name="buttonStyle">@style/ButtonThemeGreen</item>
+        <item name="actionModeStyle">@style/ActionModeGreen</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace_green</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_green</item>
+        <item name="android:alertDialogTheme">@style/alertDialogStyleGreen</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarStyleGreen</item>
+    </style>
+
+    <!-- ActionMode Styles -->
+    <style name="ActionModeGreen" parent="Base.Widget.AppCompat.ActionMode">
+        <!--<item name="background">@android:color/white</item>-->
+        <item name="titleTextStyle">@style/actionModeTitleGreen</item>
+    </style>
+
+    <style name="actionModeTitleGreen" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <!--<item name="android:textColor">?android:attr/textColorSecondary</item>-->
+        <item name="android:textColor">@color/colorPrimaryGreen</item>
+    </style>
+    <!-- / -->
+
+    <!-- Indigo Buttons Styles -->
+    <style name="ButtonThemeGreen" parent="ButtonTheme">
+        <item name="android:background">@drawable/button_theme_green_background</item>
+    </style>
+
+    <!-- / -->
+
+    <!-- AlertDialog Styles -->
+    <style name="alertDialogStyleGreen" parent="alertDialogStyle">
+        <item name="android:windowTitleStyle">@style/DialogWindowTitleGreen</item>
+        <item name="android:borderlessButtonStyle">@style/ButtonThemeGreen</item>
+    </style>
+
+    <style name="DialogWindowTitleGreen" parent="DialogWindowTitle">
+        <item name="android:textColor">@color/colorPrimaryGreen</item>
+    </style>
+    <!-- / -->
+
+    <!-- ProgressBarStyle-->
+    <style name="ProgressBarStyleGreen" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_bar_green</item>
+    </style>
+    <!-- / -->
+</resources>

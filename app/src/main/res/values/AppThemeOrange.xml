@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.Orange" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryOrange</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkOrange</item>
+        <item name="colorAccent">@color/colorAccentOrange</item>
+
+        <item name="buttonStyle">@style/ButtonThemeOrange</item>
+        <item name="actionModeStyle">@style/ActionModeOrange</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace_orange</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_orange</item>
+        <item name="android:alertDialogTheme">@style/alertDialogStyleOrange</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarStyleOrange</item>
+    </style>
+
+    <!-- ActionMode Styles -->
+    <style name="ActionModeOrange" parent="Base.Widget.AppCompat.ActionMode">
+        <!--<item name="background">@android:color/white</item>-->
+        <item name="titleTextStyle">@style/actionModeTitleOrange</item>
+    </style>
+
+    <style name="actionModeTitleOrange" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <!--<item name="android:textColor">?android:attr/textColorSecondary</item>-->
+        <item name="android:textColor">@color/colorPrimaryOrange</item>
+    </style>
+    <!-- / -->
+
+    <!-- Indigo Buttons Styles -->
+    <style name="ButtonThemeOrange" parent="ButtonTheme">
+        <item name="android:background">@drawable/button_theme_orange_background</item>
+    </style>
+
+    <!-- / -->
+
+    <!-- AlertDialog Styles -->
+    <style name="alertDialogStyleOrange" parent="alertDialogStyle">
+        <item name="android:windowTitleStyle">@style/DialogWindowTitleOrange</item>
+        <item name="android:borderlessButtonStyle">@style/ButtonThemeOrange</item>
+    </style>
+
+    <style name="DialogWindowTitleOrange" parent="DialogWindowTitle">
+        <item name="android:textColor">@color/colorPrimaryOrange</item>
+    </style>
+    <!-- / -->
+
+    <!-- ProgressBarStyle-->
+    <style name="ProgressBarStyleOrange" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_bar_orange</item>
+    </style>
+    <!-- / -->
+</resources>

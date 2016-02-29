@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.DeepOrange" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryDeepOrange</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkDeepOrange</item>
+        <item name="colorAccent">@color/colorAccentDeepOrange</item>
+
+        <item name="buttonStyle">@style/ButtonThemeDeepOrange</item>
+        <item name="actionModeStyle">@style/ActionModeDeepOrange</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_keyboard_backspace_deep_orange</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/activated_background_deep_orange</item>
+        <item name="android:alertDialogTheme">@style/alertDialogStyleDeepOrange</item>
+        <item name="android:progressBarStyleHorizontal">@style/ProgressBarStyleDeepOrange</item>
+    </style>
+
+    <!-- ActionMode Styles -->
+    <style name="ActionModeDeepOrange" parent="Base.Widget.AppCompat.ActionMode">
+        <!--<item name="background">@android:color/white</item>-->
+        <item name="titleTextStyle">@style/actionModeTitleDeepOrange</item>
+    </style>
+
+    <style name="actionModeTitleDeepOrange" parent="TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <!--<item name="android:textColor">?android:attr/textColorSecondary</item>-->
+        <item name="android:textColor">@color/colorPrimaryDeepOrange</item>
+    </style>
+    <!-- / -->
+
+    <!-- DeepOrange Buttons Styles -->
+    <style name="ButtonThemeDeepOrange" parent="ButtonTheme">
+        <item name="android:background">@drawable/button_theme_deep_orange_background</item>
+    </style>
+
+    <!-- / -->
+
+    <!-- AlertDialog Styles -->
+    <style name="alertDialogStyleDeepOrange" parent="alertDialogStyle">
+        <item name="android:windowTitleStyle">@style/DialogWindowTitleDeepOrange</item>
+        <item name="android:borderlessButtonStyle">@style/ButtonThemeDeepOrange</item>
+    </style>
+
+    <style name="DialogWindowTitleDeepOrange" parent="DialogWindowTitle">
+        <item name="android:textColor">@color/colorPrimaryDeepOrange</item>
+    </style>
+    <!-- / -->
+
+    <!-- ProgressBarStyle-->
+    <style name="ProgressBarStyleDeepOrange" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_bar_deep_orange</item>
+    </style>
+    <!-- / -->
+</resources>
