@@ -30,7 +30,9 @@
                     android:text="@string/button_text_more"
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
-                    android:drawableLeft="@drawable/ic_arrange_bring_forward" />
+                    android:drawableLeft="@drawable/ic_arrange_bring_forward"
+                    android:id="@+id/button_more"
+                    android:onClick="buttonsClickListener"/>
 
                 <Button
                     android:layout_width="0dip"
@@ -38,7 +40,8 @@
                     android:text="@string/button_text_online"
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
-                    android:id="@+id/button_on_line" />
+                    android:id="@+id/button_on_line"
+                    android:onClick="buttonsClickListener"/>
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
@@ -63,7 +66,9 @@
                     android:layout_height="wrap_content"
                     android:text="@string/button_text_music"
                     android:gravity="left|center_vertical"
-                    android:drawableLeft="@drawable/ic_music_box" />
+                    android:drawableLeft="@drawable/ic_music_box"
+                    android:id="@+id/button_music"
+                    android:onClick="buttonsClickListener"/>
 
 
                 <LinearLayout
@@ -79,7 +84,9 @@
                         android:gravity="center"
                         android:drawableTop="@drawable/ic_account_star_variant"
                         android:layout_weight="1"
-                        android:padding="10dp"/>
+                        android:padding="10dp"
+                        android:id="@+id/button_friends"
+                        android:onClick="buttonsClickListener"/>
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -87,7 +94,9 @@
                         android:gravity="center"
                         android:drawableTop="@drawable/ic_account_plus"
                         android:layout_weight="1"
-                        android:padding="10dp"/>
+                        android:padding="10dp"
+                        android:id="@+id/button_subscribers"
+                        android:onClick="buttonsClickListener"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -103,7 +112,9 @@
                         android:gravity="center"
                         android:drawableTop="@drawable/ic_google_wallet"
                         android:layout_weight="1"
-                        android:padding="10dp"/>
+                        android:padding="10dp"
+                        android:id="@+id/button_wall"
+                        android:onClick="buttonsClickListener"/>
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -111,7 +122,9 @@
                         android:gravity="center"
                         android:drawableTop="@drawable/ic_account_multiple"
                         android:layout_weight="1"
-                        android:padding="10dp"/>
+                        android:padding="10dp"
+                        android:id="@+id/button_groups"
+                        android:onClick="buttonsClickListener"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -136,7 +149,9 @@
                     android:gravity="left|center_vertical"
                     android:drawableLeft="@drawable/ic_image"
                     android:paddingTop="8dp"
-                    android:paddingBottom="8dp"/>
+                    android:paddingBottom="8dp"
+                    android:id="@+id/button_photos"
+                    android:onClick="buttonsClickListener"/>
 
                 <Button
                     android:layout_width="match_parent"
@@ -146,7 +161,9 @@
                     android:gravity="left|center_vertical"
                     android:drawableLeft="@drawable/ic_filmstrip"
                     android:paddingTop="8dp"
-                    android:paddingBottom="8dp"/>
+                    android:paddingBottom="8dp"
+                    android:id="@+id/button_videos"
+                    android:onClick="buttonsClickListener"/>
 
                 <Button
                     android:layout_width="match_parent"
@@ -156,7 +173,9 @@
                     android:gravity="left|center_vertical"
                     android:drawableLeft="@drawable/ic_file_document_box"
                     android:paddingTop="8dp"
-                    android:paddingBottom="8dp"/>
+                    android:paddingBottom="8dp"
+                    android:id="@+id/button_documents"
+                    android:onClick="buttonsClickListener"/>
 
                 <Button
                     android:layout_width="match_parent"
@@ -166,7 +185,9 @@
                     android:gravity="left|center_vertical"
                     android:drawableLeft="@drawable/ic_bookmark"
                     android:paddingTop="8dp"
-                    android:paddingBottom="8dp"/>
+                    android:paddingBottom="8dp"
+                    android:id="@+id/button_favourites"
+                    android:onClick="buttonsClickListener"/>
 
                 <Button
                     android:layout_width="match_parent"
@@ -177,7 +198,9 @@
                     android:drawableLeft="@drawable/ic_note"
                     android:layout_gravity="start"
                     android:paddingTop="8dp"
-                    android:paddingBottom="8dp"/>
+                    android:paddingBottom="8dp"
+                    android:id="@+id/button_notes"
+                    android:onClick="buttonsClickListener"/>
 
                 <Button
                     android:layout_width="match_parent"
@@ -187,7 +210,9 @@
                     android:gravity="left|center_vertical"
                     android:drawableLeft="@drawable/ic_gamepad_variant"
                     android:paddingTop="8dp"
-                    android:paddingBottom="8dp"/>
+                    android:paddingBottom="8dp"
+                    android:id="@+id/button_games"
+                    android:onClick="buttonsClickListener"/>
 
             </LinearLayout>
 
@@ -242,9 +267,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/button_text_exit"
-                    android:id="@+id/button_exit_profile"
                     android:paddingTop="8dp"
-                    android:paddingBottom="8dp"/>
+                    android:paddingBottom="8dp"
+                    android:id="@+id/button_exit_profile" />
             </LinearLayout>
 
         </android.support.v7.widget.CardView>

@@ -39,7 +39,8 @@
     </style>
 
     <style name="DialogWindowTitle">
-        <item name="android:textAppearance">@android:style/TextAppearance.Holo.DialogWindowTitle</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.Holo.DialogWindowTitle
+        </item>
     </style>
     <!-- / -->
 

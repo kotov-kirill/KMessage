@@ -1,5 +1,6 @@
 package com.example.kirill.kmessage.Activities;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,9 +12,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 
+import com.example.kirill.kmessage.Activities.FriendsActivity.FriendsActivity;
+import com.example.kirill.kmessage.Activities.PhotoActivity.PhotoActivity;
+import com.example.kirill.kmessage.Activities.SubscribersActivity.SubscribersActivity;
 import com.example.kirill.kmessage.R;
 import com.example.kirill.kmessage.Special.ApplicationThemeSetter;
 import com.example.kirill.kmessage.Special.MenuReceiver;
@@ -95,5 +100,50 @@ public class ProfileActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         MenuReceiver.menuReceiver(this, item);
         return super.onOptionsItemSelected(item);
+    }
+
+    public void buttonsClickListener(View view) {
+        int buttonID = view.getId();
+        Class aClass = null;
+        switch (buttonID){
+            case R.id.button_more:
+                aClass = MoreActivity.class;
+                break;
+            case R.id.button_music:
+                aClass = MusicActivity.class;
+                break;
+            case R.id.button_friends:
+                aClass = FriendsActivity.class;
+                break;
+            case R.id.button_subscribers:
+                aClass = SubscribersActivity.class;
+                break;
+            case R.id.button_wall:
+                aClass = WallActivity.class;
+                break;
+            case R.id.button_groups:
+                aClass = GroupsActivity.class;
+                break;
+            case R.id.button_photos:
+                aClass = PhotoActivity.class;
+                break;
+            case R.id.button_videos:
+                aClass = VideoActivity.class;
+                break;
+            case R.id.button_documents:
+                aClass = DocumentsActivity.class;
+                break;
+            case R.id.button_favourites:
+                aClass = FavoritsActivity.class;
+                break;
+            case R.id.button_notes:
+                aClass = NotesActivity.class;
+                break;
+            case R.id.button_games:
+                aClass = GameActivity.class;
+                break;
+        }
+        Intent intent = new Intent(this, aClass);
+        startActivity(intent);
     }
 }

@@ -41,7 +41,7 @@
             android:label="@string/title_activity_about_us" />
         <activity
             android:name=".Activities.SearchActivity.SearchActivity"
-            android:label="@string/title_activity_search"/>
+            android:label="@string/title_activity_search" />
         <activity
             android:name=".Activities.PhotoActivity.PhotoActivity"
             android:label="@string/title_activity_photo" />
@@ -89,7 +89,11 @@
             android:label="@string/title_activity_more" />
         <activity
             android:name=".Activities.WallActivity"
-            android:label="@string/title_activity_wall"></activity>
+            android:label="@string/title_activity_wall" />
+        <activity
+            android:name=".Activities.GameActivity"
+            android:label="@string/title_activity_game"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
